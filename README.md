@@ -14,7 +14,6 @@ As his eyes slowly adjusted to the new environment, he could make out a figure i
 He slowly rose and approached the figure. It was familiar, yet foreign. Close, yet distant. Warm, but cold...
 
 Eventually, he could see the creature. It was the same as the rest, yet oddly different. Suddenly he realised...
-
 Realised why this creature was so recognisable. "M-mother? i-is is that you?" he uttered. The creature spoke, "I have been waiting my child... waiting just for you"
 He gave his mother a hug, "What happened to you? How did you become this?" he asked. "I am a murloc now you see. Your mother is now a murloc."
 He was in shock. It was the first time in 27 years he was meeting his mother, and she had transformed into a completely different species. 
