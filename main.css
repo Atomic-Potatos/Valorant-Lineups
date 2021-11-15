@@ -143,3 +143,13 @@ body {
   --button-text-color-hover: #ece8e1;
   --button-bits-color-hover: #ece8e1;
 }
+
+
+#brim{
+  background-image: url(https://github.com/Atomic-Potatos/Valorant-Lineups/blob/main/Assets/Agents/Brimstone.png?raw=true);
+  cursor:pointer;
+  border:none;
+  width:256px;
+  height:256px;
+  text-indent: -9999px;
+}
