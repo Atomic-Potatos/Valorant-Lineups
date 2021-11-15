@@ -2,6 +2,11 @@
   --background-color: #0f1923;
 }
 
+H1 { 
+  text-align: center;
+  color: #ff4655;
+}
+
 body {
   min-height: 100vh;
   display: flex;
@@ -144,7 +149,10 @@ body {
   --button-bits-color-hover: #ece8e1;
 }
 
-html { font-size: 22px; }
+html {
+  font-size: 30px;
+  font-family: "Montserrat", sans-serif;
+}
 body { padding: 1rem; }
 
 .card {

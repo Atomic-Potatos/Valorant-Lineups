@@ -5,66 +5,79 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agent Select</title>
-  </head>
-  
+    <script>
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const agent = urlParams.get('agent');
 
-  <div class="cards">
-    <div>
-      <button class="btn btn--light">
-        <span class="btn__inner">
-          <span class="btn__slide"></span>
-          <span class="btn__content">Ascent</span>
-        </span>
-      </button>
-    </div>
-    <div>
-      <button class="btn btn--light">
-        <span class="btn__inner">
-          <span class="btn__slide"></span>
-          <span class="btn__content">Split</span>
-        </span>
-      </button>
-    </div>
-    <div>
-      <button class="btn btn--light">
-        <span class="btn__inner">
-          <span class="btn__slide"></span>
-          <span class="btn__content">Haven</span>
-        </span>
-      </button>
-    </div>
-    <div>
-      <button class="btn btn--light">
-        <span class="btn__inner">
-          <span class="btn__slide"></span>
-          <span class="btn__content">Bind</span>
-        </span>
-      </button>
-    </div>
-    <div>
-      <button class="btn btn--light">
-        <span class="btn__inner">
-          <span class="btn__slide"></span>
-          <span class="btn__content">Icebox</span>
-        </span>
-      </button>
-    </div>
-    <div>
-      <button class="btn btn--light">
-        <span class="btn__inner">
-          <span class="btn__slide"></span>
-          <span class="btn__content">Breeze</span>
-        </span>
-      </button>
-    </div>
-    <div>
-      <button class="btn btn--light">
-        <span class="btn__inner">
-          <span class="btn__slide"></span>
-          <span class="btn__content">Fracture</span>
-        </span>
-      </button>
+        window.onload = function(){
+            document.getElementById('title').innerHTML = agent.toUpperCase();
+        };
+    </script>
+  </head>
+
+  <div>
+    <h1><p id="title">hi</p></h1>
+    <br>
+    <br>
+
+    <div class="cards">
+        <div>
+        <button class="btn btn--light">
+            <span class="btn__inner">
+            <span class="btn__slide"></span>
+            <span class="btn__content">Ascent</span>
+            </span>
+        </button>
+        </div>
+        <div>
+        <button class="btn btn--light">
+            <span class="btn__inner">
+            <span class="btn__slide"></span>
+            <span class="btn__content">Split</span>
+            </span>
+        </button>
+        </div>
+        <div>
+        <button class="btn btn--light">
+            <span class="btn__inner">
+            <span class="btn__slide"></span>
+            <span class="btn__content">Haven</span>
+            </span>
+        </button>
+        </div>
+        <div>
+        <button class="btn btn--light">
+            <span class="btn__inner">
+            <span class="btn__slide"></span>
+            <span class="btn__content">Bind</span>
+            </span>
+        </button>
+        </div>
+        <div>
+        <button class="btn btn--light">
+            <span class="btn__inner">
+            <span class="btn__slide"></span>
+            <span class="btn__content">Icebox</span>
+            </span>
+        </button>
+        </div>
+        <div>
+        <button class="btn btn--light">
+            <span class="btn__inner">
+            <span class="btn__slide"></span>
+            <span class="btn__content">Breeze</span>
+            </span>
+        </button>
+        </div>
+        <div>
+        <button class="btn btn--light">
+            <span class="btn__inner">
+            <span class="btn__slide"></span>
+            <span class="btn__content">Fracture</span>
+            </span>
+        </button>
+        </div>
     </div>
   </div>
-
 </html>
