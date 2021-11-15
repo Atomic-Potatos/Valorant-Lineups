@@ -144,8 +144,39 @@ body {
   --button-bits-color-hover: #ece8e1;
 }
 
-.wrapper {
+html { font-size: 22px; }
+body { padding: 1rem; }
+
+.card {
+  background-color: dodgerblue;
+  color: white;
+  padding: 1rem;
+  height: 4rem;
+}
+
+.cards {
+  max-width: 1200px;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: auto auto auto auto auto;
-  justify-content: center;
+  grid-gap: 1rem;
+}
+
+@media (min-width: 600px) {
+  .cards { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 900px) {
+  .cards { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (min-width: 1200px) {
+  .cards { grid-template-columns: repeat(4, 1fr); }
+}
+
+@media (min-width: 1500px) {
+  .cards { grid-template-columns: repeat(5, 1fr); }
+}
+
+@media (min-width: 1800px) {
+  .cards { grid-template-columns: repeat(6, 1fr); }
 }
