@@ -18,6 +18,6 @@ Realised why this creature was so recognisable. "M-mother? i-is is that you?" he
 He gave his mother a hug, "What happened to you? How did you become this?" he asked. "I am a murloc now you see. Your mother is now a murloc."
 He was in shock. It was the first time in 27 years he was meeting his mother, and she had transformed into a completely different species. 
 This was truely the most wonderful wonder of the world and a fitting conclusion to his journey, to see the transformation of his mother into a murloc.
-The murloc's escorted him out of The Amphibian Rainforest into a cottage atop a mountain nearby the rainforest where he has been living until today.
+The murloc's escorted him out of The Amphibian Rainforest into a cottage atop a mountain nearby the rainforest where he has been living ever since that day.
 
 The end.
