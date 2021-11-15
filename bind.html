@@ -19,7 +19,44 @@
     </script>
   </head>
 
-  <div>
-    <h1><p id="title">hi</p></h1>
-    <h2><p id="title2">hi</p></h2>
-  </div>
+  <body>
+    <div>
+        <h1><p id="title">hi</p></h1>
+        <h2><p id="title2">hi</p></h2>
+
+        <button class="accordion">A Site</button>
+        <div class="panel">
+            <button onclick="window.location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'" class="miniaccordion">Truck</button>
+            <button onclick="window.location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'" class="miniaccordion">Tetris</button>
+        </div>
+
+        <button class="accordion">B Site</button>
+        <div class="panel">
+            <button onclick="window.location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'" class="miniaccordion">Left Default</button>
+            <button onclick="window.location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'" class="miniaccordion">Middle Default</button>
+            <button onclick="window.location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'" class="miniaccordion">Right Default</button>
+        </div>
+
+    </div>
+
+
+
+
+
+    <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+        panel.style.display = "none";
+        } else {
+        panel.style.display = "block";
+        }
+    });
+    }
+    </script>
+  </body>
