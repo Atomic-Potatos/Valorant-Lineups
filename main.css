@@ -5,6 +5,12 @@
 H1 { 
   text-align: center;
   color: #ff4655;
+  font-size: 50px;
+}
+H2 { 
+  text-align: center;
+  color: #ff4655;
+  font-size: 30px;
 }
 
 body {
@@ -150,10 +156,17 @@ body {
 }
 
 html {
-  font-size: 30px;
+  font-size: 10px;
   font-family: "Montserrat", sans-serif;
 }
 body { padding: 1rem; }
+
+.row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 
 .card {
   background-color: dodgerblue;

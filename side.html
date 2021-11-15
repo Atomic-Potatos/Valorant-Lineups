@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="main.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent Select</title>
+    <script>
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const agent = urlParams.get('agent');
+        const map = urlParams.get('map');
+
+        window.onload = function(){
+            document.getElementById('title').innerHTML = agent.toUpperCase() + " x " + map.toUpperCase();
+        };
+
+        function Side(side){
+            window.open(map+".html?agent="+agent+"&side="+side,"_self")
+        }
+    </script>
+  </head>
+
+  <div>
+    <h1><p id="title">hi</p></h1>
+
+    <div class="row">
+        <div>
+        <button class="btn" onclick="Side('attacking');">
+            <span class="btn__inner">
+            <span class="btn__slide"></span>
+            <span class="btn__content">Attacking</span>
+            </span>
+        </button>
+        </div>
+
+        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+
+        <div>
+        <button class="btn" onclick="Side('defending');">
+            <span class="btn__inner">
+            <span class="btn__slide"></span>
+            <span class="btn__content">Defending</span>
+            </span>
+        </button>
+        </div>
+    </div>
+
+
+  </div>

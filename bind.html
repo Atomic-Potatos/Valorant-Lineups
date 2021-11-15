@@ -1,1 +1,25 @@
-hi
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="main.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent Select</title>
+    <script>
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const agent = urlParams.get('agent');
+        const side = urlParams.get('side');
+
+        window.onload = function(){
+            document.getElementById('title').innerHTML = agent.toUpperCase() + " x BIND";
+            document.getElementById('title2').innerHTML = side.toUpperCase();
+        };
+
+    </script>
+  </head>
+
+  <div>
+    <h1><p id="title">hi</p></h1>
+    <h2><p id="title2">hi</p></h2>
+  </div>
