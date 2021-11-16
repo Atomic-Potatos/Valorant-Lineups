@@ -173,9 +173,25 @@ body {
   --button-bits-color-hover: #ece8e1;
 }
 
+.btn--light-toggled {
+  --button-background-color: var(--highlight-color);
+  --button-text-color: #ece8e1;
+  --button-inner-border-color: var(--highlight-color);
+  --button-text-color-hover: #ece8e1;
+  --button-bits-color-hover: #ece8e1;
+}
+
 .btn--dave2d {
   --button-background-color: var(--background-color);
   --button-text-color: var(--highlight-color-secondary);
+  --button-inner-border-color: var(--highlight-color-secondary);
+  --button-text-color-hover: #0f1923;
+  --button-bits-color-hover: #ece8e1;
+}
+
+.btn--dave2d-toggled {
+  --button-background-color: var(--highlight-color-secondary);
+  --button-text-color: #0f1923;
   --button-inner-border-color: var(--highlight-color-secondary);
   --button-text-color-hover: #0f1923;
   --button-bits-color-hover: #ece8e1;

@@ -19,26 +19,32 @@
     <script>
         window.onload = function(){
             var def = document.getElementById("defending");
-            var btnDef = document.getElementById("btnDefend");
+            var btnAtt = document.getElementById("btnAttack");
+            var btnDeftoggled = document.getElementById("btnDefend-toggled");
             def.style.display = "none";
-            btnDef.style.display = "none";
+            btnAtt.style.display = "none";
+            btnDeftoggled.style.display = "none";
         };
 
         function Toggle() {
-            var att = document.getElementById("attacking");
-            var def = document.getElementById("defending");
             var btnAtt = document.getElementById("btnAttack");
             var btnDef = document.getElementById("btnDefend");
-            if (att.style.display === "none") {
-                att.style.display = "block";
-                def.style.display = "none";
+            var btnAtttoggled = document.getElementById("btnAttack-toggled");
+            var btnDeftoggled = document.getElementById("btnDefend-toggled");
+            if (btnAtt.style.display === "none") {
+
                 btnAtt.style.display = "block";
+                btnAtttoggled.style.display = "none";
+
                 btnDef.style.display = "none";
+                btnDeftoggled.style.display = "block";
+
             } else {
-                att.style.display = "none";
-                def.style.display = "block"
                 btnAtt.style.display = "none";
+                btnAtttoggled.style.display = "block";
+
                 btnDef.style.display = "block";
+                btnDeftoggled.style.display = "none";
             }
         }
 
@@ -50,6 +56,7 @@
         <div class="wrapper">
             <h1><p id="title">SOVA x BIND</p></h1>
 
+            <div class="row">
             <div id="btnAttack">
                 <button class="btn btn--light" onclick="Toggle()">
                     <span class="btn__inner">
@@ -57,6 +64,14 @@
                     <span id="button" class="btn__content">Attacking</span>
                     </span>
                 </button>
+            </div>
+            <div id="btnAttack-toggled">
+              <button class="btn btn--light-toggled" >
+                  <span class="btn__inner">
+                  <span class="btn__light-toggled"></span>
+                  <span id="button" class="btn__content">Attackers</span>
+                  </span>
+              </button>
             </div>
             <div id="btnDefend">
                 <button class="btn btn--dave2d" onclick="Toggle()">
@@ -66,8 +81,16 @@
                     </span>
                 </button>
             </div>
+            <div id="btnDefend-toggled">
+            <button class="btn btn--dave2d-toggled">
+                <span class="btn__inner">
+                <span class="btn__slidedave2d-toggled"></span>
+                <span id="button" class="btn__content">Defenders</span>
+                </span>
+            </button>
+            </div>
+          </div>
         </div>
-
 
         <div class="imagewrap">
             <img src="https://github.com/Atomic-Potatos/Valorant-Lineups/blob/main/Assets/Maps/Bind.png?raw=true" alt="Bind">
