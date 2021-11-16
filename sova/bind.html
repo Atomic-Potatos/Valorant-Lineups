@@ -27,6 +27,8 @@
         };
 
         function Toggle() {
+            var def = document.getElementById("defending");
+            var att = document.getElementById("attacking");
             var btnAtt = document.getElementById("btnAttack");
             var btnDef = document.getElementById("btnDefend");
             var btnAtttoggled = document.getElementById("btnAttack-toggled");
@@ -39,12 +41,18 @@
                 btnDef.style.display = "none";
                 btnDeftoggled.style.display = "block";
 
+                att.style.display = "none"
+                def.style.display = "block"
+
             } else {
                 btnAtt.style.display = "none";
                 btnAtttoggled.style.display = "block";
 
                 btnDef.style.display = "block";
                 btnDeftoggled.style.display = "none";
+
+                att.style.display = "block"
+                def.style.display = "none"
             }
         }
 
@@ -69,7 +77,7 @@
               <button class="btn btn--light-toggled" >
                   <span class="btn__inner">
                   <span class="btn__light-toggled"></span>
-                  <span id="button" class="btn__content">Attackers</span>
+                  <span id="button" class="btn__content">Attacking</span>
                   </span>
               </button>
             </div>
@@ -85,7 +93,7 @@
             <button class="btn btn--dave2d-toggled">
                 <span class="btn__inner">
                 <span class="btn__slidedave2d-toggled"></span>
-                <span id="button" class="btn__content">Defenders</span>
+                <span id="button" class="btn__content">Defending</span>
                 </span>
             </button>
             </div>
