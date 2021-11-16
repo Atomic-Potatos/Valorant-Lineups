@@ -135,6 +135,16 @@ body {
   transition: all .2s ease;
 }
 
+.btn__slidedave2d {
+  display: block;
+  position: absolute;
+  top: 0; bottom: -1px; left: -8px;
+  width: 0;
+  background-color: var(--highlight-color-secondary);
+  transform: skew(-15deg);
+  transition: all .2s ease;
+}
+
 .btn__content {
   position: relative;
 }
@@ -144,6 +154,10 @@ body {
 }
 
 .btn:hover .btn__slide {
+  width: calc(100% + 15px);
+}
+
+.btn:hover .btn__slidedave2d {
   width: calc(100% + 15px);
 }
 
@@ -159,11 +173,11 @@ body {
   --button-bits-color-hover: #ece8e1;
 }
 
-.btn--green {
+.btn--dave2d {
   --button-background-color: var(--background-color);
   --button-text-color: var(--highlight-color-secondary);
   --button-inner-border-color: var(--highlight-color-secondary);
-  --button-text-color-hover: #ece8e1;
+  --button-text-color-hover: #0f1923;
   --button-bits-color-hover: #ece8e1;
 }
 
