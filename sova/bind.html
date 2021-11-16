@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="../main.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent Select</title>
+    <style>
+        .icon {
+            max-width: 10vw;
+            max-height: 10vh;
+        }
+        .imagewrap {display:inline-block;position:relative;}
+        .button1 {max-width:3vw;max-height:3vh;height=auto;  position:absolute;top:64%;left:33%;}
+        .button2 {max-width:3vw;max-height:3vh;height=auto;  position:absolute;top:70%;left:70%;}
+        .button3 {max-width:3vw;max-height:3vh;height=auto;  position:absolute;top:57%;left:50%;}
+        .button4 {max-width:3vw;max-height:3vh;height=auto;  position:absolute;top:23%;left:75%;}
+        
+    </style>
+    <script>
+        window.onload = function(){
+            var def = document.getElementById("defending");
+            def.style.display = "none";
+        };
+
+        function Toggle() {
+            var att = document.getElementById("attacking");
+            var def = document.getElementById("defending");
+            var btn = document.getElementById("button");
+            if (att.style.display === "none") {
+                att.style.display = "block";
+                def.style.display = "none";
+                btn.innerHTML = "Attacking";
+            } else {
+                att.style.display = "none";
+                def.style.display = "block"
+                btn.innerHTML = "Defending";
+            }
+        }
+
+    </script>
+  </head>
+
+  <body>
+    <div>
+        <div class="wrapper">
+            <h1><p id="title">SOVA x BIND</p></h1>
+
+            <button class="btn" onclick="Toggle()">
+                <span class="btn__inner">
+                <span class="btn__slide"></span>
+                <span id="button" class="btn__content">Attacking</span>
+                </span>
+            </button>
+        </div>
+
+
+        <div class="imagewrap">
+            <img src="https://github.com/Atomic-Potatos/Valorant-Lineups/blob/main/Assets/Maps/Bind.png?raw=true" alt="Bind">
+            <div id="attacking">
+                <input type="image" src="https://github.com/Atomic-Potatos/Valorant-Lineups/blob/main/Assets/Icons/Recon_bolt/Recon_Bolt-red.png?raw=true" onclick="location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ';" class="button1" value="Button 1"/>
+                <input type="image" src="https://github.com/Atomic-Potatos/Valorant-Lineups/blob/main/Assets/Icons/Recon_bolt/Recon_Bolt-orange.png?raw=true" onclick="location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ';" class="button2" value="Button 2"/>
+                <input type="image" src="https://github.com/Atomic-Potatos/Valorant-Lineups/blob/main/Assets/Icons/Recon_bolt/Recon_Bolt-light_blue.png?raw=true" onclick="location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ';" class="button3" value="Button 3"/>
+            </div>
+            <div id="defending">
+                <input type="image" src="https://github.com/Atomic-Potatos/Valorant-Lineups/blob/main/Assets/Icons/Recon_bolt/Recon_Bolt-dark_blue.png?raw=true" onclick="location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ';" class="button4" value="Button 4"/>
+            </div>
+        </div>
+    </div>
+  </body>
