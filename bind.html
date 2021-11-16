@@ -5,6 +5,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agent Select</title>
+    <style>
+        .imagewrap {display:inline-block;position:relative;}
+        .button1 {position:absolute;top:65%;left:33%;}
+        .button2 {position:absolute;top:0%;left:0%;}
+        .button3 {position:absolute;top:50%;left:20%;}
+    </style>
     <script>
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);
@@ -23,6 +29,11 @@
     <div>
         <h1><p id="title">hi</p></h1>
         <h2><p id="title2">hi</p></h2>
-        <img src="https://github.com/Atomic-Potatos/Valorant-Lineups/blob/main/Assets/Maps/Bind.png?raw=true" alt="Bind">
+        <div class="imagewrap"> 
+            <img src="https://github.com/Atomic-Potatos/Valorant-Lineups/blob/main/Assets/Maps/Bind.png?raw=true" alt="Bind">
+            <input type="image" src="https://github.com/Atomic-Potatos/Valorant-Lineups/blob/main/Assets/Icons/Recon_Bolt.png?raw=true" class="button1" value="Button 1" width=20 height=20/>
+            <input type="button" class="button2" value="Button 2" />
+            <input type="button" class="button3" value="Button 3" />
+        </div>
     </div>
   </body>
