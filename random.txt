@@ -20,3 +20,15 @@
 
 
 
+        
+        let BSPr = document.getElementById('BSitePre')
+        let div = document.createElement('div');
+        div.innerHTML = ''
+        div.innerHTML += '<button onclick=\"window.location.href=\'https://github.com/Atomic-Potatos/Valorant-Lineups/blob/main/Valorant%20Lineups/Sova/Bind/Attacking/B%20Site/Pre_Plant/A%20short%20to%20B%20Site.png\'\" class=\"miniaccordion\">A Short to B Site</button>';
+        BSPr.appendChild(div);
+
+        let BSPo = document.getElementById('BSitePost')
+        let div = document.createElement('div');
+        div.innerHTML = ''
+        div.innerHTML += '<button onclick=\"window.location.href=\'https://github.com/Atomic-Potatos/Valorant-Lineups/blob/main/Valorant%20Lineups/Sova/Bind/Attacking/B%20Site/Pre_Plant/A%20short%20to%20B%20Site.png\'\" class=\"miniaccordion\">A Short to B Site</button>';
+        BSPo.appendChild(div);

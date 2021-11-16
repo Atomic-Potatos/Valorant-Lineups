@@ -11,14 +11,6 @@
         const agent = urlParams.get('agent');
         const side = urlParams.get('side');
 
-        const para = document.createElement("p");
-        const node = document.createTextNode("This is new.");
-        para.appendChild(node);
-
-        const element = document.getElementById("div1");
-        const child = document.getElementById("p1");
-        element.insertBefore(para, child);
-
         window.onload = function(){
             document.getElementById('title').innerHTML = agent.toUpperCase() + " x BIND";
             document.getElementById('title2').innerHTML = side.toUpperCase();
@@ -32,19 +24,29 @@
         <h1><p id="title">hi</p></h1>
         <h2><p id="title2">hi</p></h2>
 
-        <button class="accordion">A Site</button>
-        <div class="panel">
-            <button onclick="window.location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'" class="miniaccordion">Truck</button>
-            <button onclick="window.location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'" class="miniaccordion">Tetris</button>
-        </div>
+            <button class="accordion">A Site</button>
+            <div class="panel">
+                <button class="accordion">Pre Plant</button>
+                <div class="panel">
+                    <div id="ASitePre"></div>
+                </div>
+                <button class="accordion">Post Plant</button>
+                <div class="panel">
+                    <div id="ASitePost"></div>
+                </div>
+            </div>
 
-        <button class="accordion">B Site</button>
-        <div class="panel">
-            <button onclick="window.location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'" class="miniaccordion">Left Default</button>
-            <button onclick="window.location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'" class="miniaccordion">Middle Default</button>
-            <button onclick="window.location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'" class="miniaccordion">Right Default</button>
-        </div>
-
+            <button class="accordion">B Site</button>
+            <div class="panel">
+                <button class="accordion">Pre Plant</button>
+                <div class="panel">
+                    <div id="BSitePre"></div>
+                </div>
+                <button class="accordion">Post Plant</button>
+                <div class="panel">
+                    <div id="BSitePost"></div>
+                </div>
+            </div>
     </div>
 
 
@@ -52,19 +54,49 @@
 
 
     <script>
-    var acc = document.getElementsByClassName("accordion");
-    var i;
-
-    for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var panel = this.nextElementSibling;
-        if (panel.style.display === "block") {
-        panel.style.display = "none";
-        } else {
-        panel.style.display = "block";
+        let ASPr = document.getElementById('ASitePre')
+        let div1 = document.createElement('div');
+        div1.innerHTML = ''
+        let ASPo = document.getElementById('ASitePost')
+        let div2 = document.createElement('div');
+        div2.innerHTML = ''
+        let BSPr = document.getElementById('BSitePre')
+        let div3 = document.createElement('div');
+        div3.innerHTML = ''
+        let BSPo = document.getElementById('BSitePost')
+        let div4 = document.createElement('div');
+        div4.innerHTML = ''
+        
+        if (agent == 'sova') {
+            if (side == 'attacking') {
+                div1.innerHTML += '<button onclick=\"window.location.href=\'https://github.com/Atomic-Potatos/Valorant-Lineups/blob/main/Valorant%20Lineups/Sova/Bind/Attacking/A%20Site/Pre_Plant/B%20short%20to%20A%20Site.png\'\" class=\"miniaccordion\">B Short to A Site</button>';
+                div2.innerHTML += '<button onclick=\"window.location.href=\'https://github.com/Atomic-Potatos/Valorant-Lineups/blob/main/Valorant%20Lineups/Sova/Bind/Attacking/A%20Site/Pre_Plant/B%20short%20to%20A%20Site.png\'\" class=\"miniaccordion\">B Short to A Site</button>';
+                div3.innerHTML += '<button onclick=\"window.location.href=\'https://github.com/Atomic-Potatos/Valorant-Lineups/blob/main/Valorant%20Lineups/Sova/Bind/Attacking/B%20Site/Pre_Plant/A%20short%20to%20B%20Site.png\'\" class=\"miniaccordion\">A Short to B Site</button>';
+                div4.innerHTML += '<button onclick=\"window.location.href=\'https://github.com/Atomic-Potatos/Valorant-Lineups/blob/main/Valorant%20Lineups/Sova/Bind/Attacking/B%20Site/Pre_Plant/A%20short%20to%20B%20Site.png\'\" class=\"miniaccordion\">A Short to B Site</button>';
+            }
         }
-    });
-    }
+    
+        ASPr.appendChild(div1);
+        ASPo.appendChild(div2);
+        BSPr.appendChild(div3);
+        BSPo.appendChild(div4);
+
+
+
+
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+            panel.style.display = "none";
+            } else {
+            panel.style.display = "block";
+            }
+        });
+        }
     </script>
   </body>
