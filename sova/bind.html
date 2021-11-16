@@ -20,21 +20,26 @@
     <script>
         window.onload = function(){
             var def = document.getElementById("defending");
+            var btnDef = document.getElementById("btnDefend");
             def.style.display = "none";
+            btnDef.style.display = "none";
         };
 
         function Toggle() {
             var att = document.getElementById("attacking");
             var def = document.getElementById("defending");
-            var btn = document.getElementById("button");
+            var btnAtt = document.getElementById("btnAttack");
+            var btnDef = document.getElementById("btnDefend");
             if (att.style.display === "none") {
                 att.style.display = "block";
                 def.style.display = "none";
-                btn.innerHTML = "Attacking";
+                btnAtt.style.display = "block";
+                btnDef.style.display = "none";
             } else {
                 att.style.display = "none";
                 def.style.display = "block"
-                btn.innerHTML = "Defending";
+                btnAtt.style.display = "none";
+                btnDef.style.display = "block";
             }
         }
 
@@ -46,12 +51,22 @@
         <div class="wrapper">
             <h1><p id="title">SOVA x BIND</p></h1>
 
-            <button class="btn" onclick="Toggle()">
-                <span class="btn__inner">
-                <span class="btn__slide"></span>
-                <span id="button" class="btn__content">Attacking</span>
-                </span>
-            </button>
+            <div id="btnAttack">
+                <button class="btn btn--light" onclick="Toggle()">
+                    <span class="btn__inner">
+                    <span class="btn__slide"></span>
+                    <span id="button" class="btn__content">Attacking</span>
+                    </span>
+                </button>
+            </div>
+            <div id="btnDefend">
+                <button class="btn btn--green" onclick="Toggle()">
+                    <span class="btn__inner">
+                    <span class="btn__slide"></span>
+                    <span id="button" class="btn__content">Defending</span>
+                    </span>
+                </button>
+            </div>
         </div>
 
 

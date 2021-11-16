@@ -41,6 +41,7 @@ body {
   --border-color: #7D8082;
   --button-background-color: #ece8e1;
   --highlight-color: #ff4655;
+  --highlight-color-secondary: #10f8fb;
   --button-inner-border-color: transparent;
   --button-bits-color: var(--background-color);
   --button-bits-color-hover: var(--button-background-color);
@@ -154,6 +155,14 @@ body {
   --button-background-color: var(--background-color);
   --button-text-color: var(--highlight-color);
   --button-inner-border-color: var(--highlight-color);
+  --button-text-color-hover: #ece8e1;
+  --button-bits-color-hover: #ece8e1;
+}
+
+.btn--green {
+  --button-background-color: var(--background-color);
+  --button-text-color: var(--highlight-color-secondary);
+  --button-inner-border-color: var(--highlight-color-secondary);
   --button-text-color-hover: #ece8e1;
   --button-bits-color-hover: #ece8e1;
 }
