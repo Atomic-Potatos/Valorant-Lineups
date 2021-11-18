@@ -8,21 +8,24 @@
     <script type="text/JavaScript">
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);
-        const agent = urlParams.get('agent');
         const map = urlParams.get('map');
+        const agent = urlParams.get('agent');
         const lineup = urlParams.get('lineup');
 
         window.onload = function(){
             document.getElementById('title').innerHTML = map.toUpperCase();
-            document.getElementById('imageBox').src = "/Valorant-Lineups/Valorant Lineups/"+agent+"/"+map+"/"+lineup+".jpg")
         };
 
+        setTimeout(function(){
+        var image = "Valorant Lineups/"+agent+"/"+map+"/"+lineup+".jpg";
+        document.getElementById('image').src = image;
+        }, 0);
     </script>
   </head>
 
   <body>
-    <p>
-      <img id="imageBox" src="fail.jpg">
-    </p>
+    <div>
+      <img src="fail.jpg" id="image" />
+  </div>
   </body>
 </html>
