@@ -53,6 +53,7 @@ body {
   font-weight: bold;
   font-size: 14px;
   transition: all .15s ease;
+  width: 175px;
 }
 
 .btn::before,
