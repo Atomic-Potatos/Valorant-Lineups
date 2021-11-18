@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="main.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent Select</title>
+    <script type="text/JavaScript">
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const agent = urlParams.get('agent');
+        const map = urlParams.get('map');
+        const lineup = urlParams.get('lineup');
+
+        window.onload = function(){
+            document.getElementById('title').innerHTML = map.toUpperCase();
+            document.getElementById('imageBox').src = "/Valorant-Lineups/Valorant Lineups/"+agent+"/"+map+"/"+lineup+".jpg")
+        };
+
+    </script>
+  </head>
+
+  <body>
+    <p>
+      <img id="imageBox" src="fail.jpg">
+    </p>
+  </body>
+</html>
