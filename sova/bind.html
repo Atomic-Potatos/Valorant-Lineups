@@ -17,14 +17,7 @@
         .button4 {max-width:3vw;max-height:3vh;height=auto;  position:absolute;top:23%;left:75%;}   
     </style>
     <script>
-        window.onload = function(){
-            var def = document.getElementById("defending");
-            var btnAtt = document.getElementById("btnAttack");
-            var btnDeftoggled = document.getElementById("btnDefend-toggled");
-            def.style.display = "none";
-            btnAtt.style.display = "none";
-            btnDeftoggled.style.display = "none";
-        };
+        window.onload = function(){ };
 
         function Toggle() {
             var def = document.getElementById("defending");
@@ -65,7 +58,7 @@
             <h1><p id="title">SOVA x BIND</p></h1>
 
             <div class="row">
-            <div id="btnAttack">
+            <div id="btnAttack" style="display:none;">
                 <button class="btn btn--light" onclick="Toggle()">
                     <span class="btn__inner">
                     <span class="btn__slide"></span>
@@ -89,7 +82,7 @@
                     </span>
                 </button>
             </div>
-            <div id="btnDefend-toggled">
+            <div id="btnDefend-toggled" style="display:none;">
             <button class="btn btn--dave2d-toggled">
                 <span class="btn__inner">
                 <span class="btn__slidedave2d-toggled"></span>
@@ -107,7 +100,7 @@
                 <input type="image" src="https://github.com/Atomic-Potatos/Valorant-Lineups/blob/main/Assets/Icons/Recon_bolt/Recon_Bolt-orange.png?raw=true" onclick="location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ';" class="button2" value="Button 2"/>
                 <input type="image" src="https://github.com/Atomic-Potatos/Valorant-Lineups/blob/main/Assets/Icons/Recon_bolt/Recon_Bolt-light_blue.png?raw=true" onclick="location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ';" class="button3" value="Button 3"/>
             </div>
-            <div id="defending">
+            <div id="defending" style="display:none;">
                 <input type="image" src="https://github.com/Atomic-Potatos/Valorant-Lineups/blob/main/Assets/Icons/Recon_bolt/Recon_Bolt-dark_blue.png?raw=true" onclick="location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ';" class="button4" value="Button 4"/>
             </div>
         </div>
