@@ -4,17 +4,13 @@
     <link rel="stylesheet" href="main.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agent Select</title>
+    <title>Lineup</title>
     <script type="text/JavaScript">
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);
         const map = urlParams.get('map');
         const agent = urlParams.get('agent');
         const lineup = urlParams.get('lineup');
-
-        window.onload = function(){
-            document.getElementById('title').innerHTML = map.toUpperCase();
-        };
 
         setTimeout(function(){
         var image = "Valorant Lineups/"+agent+"/"+map+"/"+lineup+".jpg";
@@ -24,8 +20,8 @@
   </head>
 
   <body>
-    <div>
-      <img src="fail.jpg" id="image" />
-  </div>
+    <div class="imagewrap">
+      <img src="fail.jpg" id="image">
+    </div>
   </body>
 </html>
