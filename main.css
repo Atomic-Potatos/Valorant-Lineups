@@ -198,6 +198,10 @@ body {
   --button-bits-color-hover: #ece8e1;
 }
 
+.btn--home {
+  width: 120px;
+}
+
 html {
   font-size: 10px;
   font-family: "Montserrat", sans-serif;

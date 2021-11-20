@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <link rel="stylesheet" href="main.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,78 +11,97 @@
         const urlParams = new URLSearchParams(queryString);
         const agent = urlParams.get('agent');
 
-        window.onload = function(){
+        window.onload = function () {
             document.getElementById('title').innerHTML = agent.toUpperCase();
         };
 
-        function Map(map){
-            window.open("agents/"+agent+"/"+map+".html","_self")
+        function Map(map) {
+            window.open("agents/" + agent + "/" + map + ".html", "_self")
+        }
+
+        function GoHome() {
+            window.open("index.html","_self")
         }
     </script>
-  </head>
+</head>
 
-  <div>
-    <h1><p id="title">hi</p></h1>
-    <br>
-    <br>
+<body>
+    <div class="wrapper">
+        <h1>
+            <p id="title">hi</p>
+        </h1>
+        <br>
+        <br>
 
-    <div class="cards">
-        <div>
-        <button class="btn btn--dark" onclick="Map('ascent');">
-            <span class="btn__inner">
-            <span class="btn__slide"></span>
-            <span class="btn__content">Ascent</span>
-            </span>
-        </button>
+        <div class="cards">
+            <div>
+                <button class="btn btn--dark" onclick="Map('ascent');">
+                    <span class="btn__inner">
+                        <span class="btn__slide"></span>
+                        <span class="btn__content">Ascent</span>
+                    </span>
+                </button>
+            </div>
+            <div>
+                <button class="btn btn--dark" onclick="Map('bind');">
+                    <span class="btn__inner">
+                        <span class="btn__slide"></span>
+                        <span class="btn__content">Bind</span>
+                    </span>
+                </button>
+            </div>
+            <div>
+                <button class="btn btn--dark" onclick="Map('breeze');">
+                    <span class="btn__inner">
+                        <span class="btn__slide"></span>
+                        <span class="btn__content">Breeze</span>
+                    </span>
+                </button>
+            </div>
+            <div>
+                <button class="btn btn--dark" onclick="Map('fracture');">
+                    <span class="btn__inner">
+                        <span class="btn__slide"></span>
+                        <span class="btn__content">Fracture</span>
+                    </span>
+                </button>
+            </div>
+            <div>
+                <button class="btn btn--dark" onclick="Map('haven');">
+                    <span class="btn__inner">
+                        <span class="btn__slide"></span>
+                        <span class="btn__content">Haven</span>
+                    </span>
+                </button>
+            </div>
+            <div>
+                <button class="btn btn--dark" onclick="Map('icebox');">
+                    <span class="btn__inner">
+                        <span class="btn__slide"></span>
+                        <span class="btn__content">Icebox</span>
+                    </span>
+                </button>
+            </div>
+            <div>
+                <button class="btn btn--dark" onclick="Map('split');">
+                    <span class="btn__inner">
+                        <span class="btn__slide"></span>
+                        <span class="btn__content">Split</span>
+                    </span>
+                </button>
+            </div>
         </div>
-        <div>
-        <button class="btn btn--dark" onclick="Map('bind');">
-            <span class="btn__inner">
-            <span class="btn__slide"></span>
-            <span class="btn__content">Bind</span>
-            </span>
-        </button>
+
+        <div class="home">
+            <button class="btn btn--home" onclick="GoHome()">
+                <span class="btn__inner">
+                    <span class="btn__slide"></span>
+                    <span id="button" class="btn__content">Home</span>
+                </span>
+            </button>
         </div>
-        <div>
-        <button class="btn btn--dark" onclick="Map('breeze');">
-            <span class="btn__inner">
-            <span class="btn__slide"></span>
-            <span class="btn__content">Breeze</span>
-            </span>
-        </button>
-        </div>
-        <div>
-        <button class="btn btn--dark" onclick="Map('fracture');">
-            <span class="btn__inner">
-            <span class="btn__slide"></span>
-            <span class="btn__content">Fracture</span>
-            </span>
-        </button>
-        </div>
-        <div>
-        <button class="btn btn--dark" onclick="Map('haven');">
-            <span class="btn__inner">
-            <span class="btn__slide"></span>
-            <span class="btn__content">Haven</span>
-            </span>
-        </button>
-        </div>
-        <div>
-        <button class="btn btn--dark" onclick="Map('icebox');">
-            <span class="btn__inner">
-            <span class="btn__slide"></span>
-            <span class="btn__content">Icebox</span>
-            </span>
-        </button>
-        </div>
-        <div>
-        <button class="btn btn--dark" onclick="Map('split');"> 
-            <span class="btn__inner">
-            <span class="btn__slide"></span>
-            <span class="btn__content">Split</span>
-            </span>
-        </button>
-        </div>
+
     </div>
-  </div>
+</body>
+
 </html>
