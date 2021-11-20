@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <link rel="stylesheet" href="../../main.css">
     <link rel="stylesheet" href="viper.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agent Select</title>
+    <title>VIPER x HAVEN</title>
     <style>
         .icon {
             max-width: 10vw;
             max-height: 10vh;
         }
         .imagewrap {display:inline-block;position:relative;}
-        .button1 {max-width:3vw;max-height:3vh;height=auto;  position:absolute;top:64%;left:33%;}
+        .molly1  {max-width:3vw;max-height:3vh;height=auto;  position:absolute;top:53%;left:69.5%;}
+        .m1d1    {max-width:1vw;max-height:1vh;height=auto;  position:absolute;top:34%;left:80.5%;}
+        .m1d2    {max-width:1vw;max-height:1vh;height=auto;  position:absolute;top:31.3%;left:81.8%;}
+        .m1d3    {max-width:1vw;max-height:1vh;height=auto;  position:absolute;top:28.5%;left:80.5%;}
+        .m1d4    {max-width:1vw;max-height:1vh;height=auto;  position:absolute;top:31.3%;left:79.1%;}
+
         .button2 {max-width:3vw;max-height:3vh;height=auto;  position:absolute;top:70%;left:70%;}
         .button3 {max-width:3vw;max-height:3vh;height=auto;  position:absolute;top:57%;left:50%;}
         .button4 {max-width:3vw;max-height:3vh;height=auto;  position:absolute;top:23%;left:75%;}   
     </style>
     <script>
-        window.onload = function(){ };
+        window.onload = function(){};
 
         function Toggle() {
             var def = document.getElementById("defending");
@@ -45,8 +51,8 @@
                 btnDef.style.display = "block";
                 btnDeftoggled.style.display = "none";
 
-                att.style.display = "block"
-                def.style.display = "none"
+                att.style.display = "block";
+                def.style.display = "none";
             }
         }
 
@@ -55,7 +61,7 @@
             var smokeDef = document.getElementById("smokeDef");
             var mollyAtt = document.getElementById("mollyAtt");
             var mollyDef = document.getElementById("mollyDef");
-            
+
             var btnSmk = document.getElementById("btnSmokes");
             var btnMol = document.getElementById("btnMolly");
             var btnSmkToggled = document.getElementById("btnSmokes-toggled");
@@ -86,103 +92,134 @@
             }
         }
 
+        function GoHome() {
+            window.open("../../index.html","_self")
+        }
+
     </script>
-  </head>
+</head>
 
-  <body>
-    <div>
-        <div class="wrapper">
-            <h1><p id="title">VIPER x HAVEN</p></h1>
+<body>
+    <div class="wrapper">
+        <h1>
+            <p id="title">VIPER x HAVEN</p>
+        </h1>
 
-            <div class="row">
-                <div id="btnAttack" style="display:none;">
-                    <button class="btn btn--light" onclick="Toggle()">
-                        <span class="btn__inner">
+        <div class="row">
+            <div id="btnAttack" style="display:none;">
+                <button class="btn btn--dark" onclick="Toggle()">
+                    <span class="btn__inner">
                         <span class="btn__slide"></span>
                         <span id="button" class="btn__content">Attacking</span>
-                        </span>
-                    </button>
-                </div>
-                <div id="btnAttack-toggled">
-                <button class="btn btn--light-toggled" >
-                    <span class="btn__inner">
-                    <span class="btn__light-toggled"></span>
-                    <span id="button" class="btn__content">Attacking</span>
                     </span>
                 </button>
-                </div>
-                <div id="btnDefend">
-                    <button class="btn btn--dave2d" onclick="Toggle()">
-                        <span class="btn__inner">
+            </div>
+            <div id="btnAttack-toggled">
+                <button class="btn btn--dark-toggled">
+                    <span class="btn__inner">
+                        <span class="btn__light-toggled"></span>
+                        <span id="button" class="btn__content">Attacking</span>
+                    </span>
+                </button>
+            </div>
+            <div id="btnDefend">
+                <button class="btn btn--dave2d" onclick="Toggle()">
+                    <span class="btn__inner">
                         <span class="btn__slidedave2d"></span>
                         <span id="button" class="btn__content">Defending</span>
-                        </span>
-                    </button>
-                </div>
-                <div id="btnDefend-toggled" style="display:none;">
+                    </span>
+                </button>
+            </div>
+            <div id="btnDefend-toggled" style="display:none;">
                 <button class="btn btn--dave2d-toggled">
                     <span class="btn__inner">
-                    <span class="btn__slidedave2d-toggled"></span>
-                    <span id="button" class="btn__content">Defending</span>
+                        <span class="btn__slidedave2d-toggled"></span>
+                        <span id="button" class="btn__content">Defending</span>
                     </span>
                 </button>
-                </div>
             </div>
+        </div>
 
-            <div class="row">
-                <div id="btnSmokes" style="display:none;">
-                <button class="btn-viper btn--light" onclick="ToggleItem()">
+        <div class="row">
+            <div id="btnSmokes" style="display:none;">
+                <button class="btn-viper btn--viper" onclick="ToggleItem()">
                     <span class="btn__inner">
-                    <span class="btn__slide"></span>
-                    <span id="button" class="btn__content">Smokes</span>
+                        <span class="btn__slide"></span>
+                        <span id="button" class="btn__content">Smokes</span>
                     </span>
                 </button>
-                </div>
-                <div id="btnSmokes-toggled">
-                <button class="btn-viper btn--light-toggled">
+            </div>
+            <div id="btnSmokes-toggled">
+                <button class="btn-viper btn--viper-toggled">
                     <span class="btn__inner">
-                    <span class="btn__slide"></span>
-                    <span id="button" class="btn__content">Smokes</span>
+                        <span class="btn__slide"></span>
+                        <span id="button" class="btn__content">Smokes</span>
                     </span>
                 </button>
-                </div>
-                <div id="btnMolly">
-                <button class="btn-viper btn--light" onclick="ToggleItem()">
+            </div>
+            <div id="btnMolly">
+                <button class="btn-viper btn--viper" onclick="ToggleItem()">
                     <span class="btn__inner">
-                    <span class="btn__slide"></span>
-                    <span id="button" class="btn__content">Snakebite</span>
+                        <span class="btn__slide"></span>
+                        <span id="button" class="btn__content">Snakebite</span>
                     </span>
                 </button>
-                </div>
-                <div id="btnMolly-toggled" style="display:none;">
-                <button class="btn-viper btn--light-toggled">
+            </div>
+            <div id="btnMolly-toggled" style="display:none;">
+                <button class="btn-viper btn--viper-toggled">
                     <span class="btn__inner">
-                    <span class="btn__slide"></span>
-                    <span id="button" class="btn__content">Snakebite</span>
+                        <span class="btn__slide"></span>
+                        <span id="button" class="btn__content">Snakebite</span>
                     </span>
                 </button>
-                </div>
             </div>
         </div>
 
         <div class="imagewrap">
-            <img src="../../Assets/Maps/Haven.png" alt="Haven">
+            <img src="../../Assets/Maps/Haven.png" alt="Bind">
             <div id="attacking">
                 <div id="smokeAtt">
-                    <input type="image" src="../../Assets/Icons/Poison_Cloud.png" onclick="location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ';" class="button2" value="Button 2"/>
-                    <input type="image" src="../../Assets/Icons/Toxic_Screen.png" onclick="location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ';" class="button3" value="Button 3"/>
+                    <input type="image" src="../../Assets/Icons/Poison_Cloud.png"
+                        onclick="location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ';" class="button2" />
+                    <input type="image" src="../../Assets/Icons/Toxic_Screen.png"
+                        onclick="location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ';" class="button3" />
                 </div>
                 <div id="mollyAtt" style="display:none;">
-                    <input type="image" src="../../Assets/Icons/Snakebite.png" onclick="location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ';" class="button1" value="Button 1"/>
+                    <input type="image" src="../../Assets/Icons/Snakebite/Snakebite-dark_blue.png"
+                        onclick="location.href='../../lineup.html?map=ascent&agent=viper&lineup=Viper-Ascent-A-Snakebite-Generator'"
+                        class="molly1" />
+                    <input type="image" src="../../Assets/Icons/Dot/Dot-dark_blue.png"
+                        onclick="location.href='../../lineup.html?map=ascent&agent=viper&lineup=Viper-Ascent-A-Snakebite-Generator'"
+                        class="m1d1" />
+                    <input type="image" src="../../Assets/Icons/Dot/Dot-dark_blue.png"
+                        onclick="location.href='../../lineup.html?map=ascent&agent=viper&lineup=Viper-Ascent-A-Snakebite-Generator'"
+                        class="m1d2" />
+                    <input type="image" src="../../Assets/Icons/Dot/Dot-dark_blue.png"
+                        onclick="location.href='../../lineup.html?map=ascent&agent=viper&lineup=Viper-Ascent-A-Snakebite-Generator'"
+                        class="m1d3" />
+                    <input type="image" src="../../Assets/Icons/Dot/Dot-dark_blue.png"
+                        onclick="location.href='../../lineup.html?map=ascent&agent=viper&lineup=Viper-Ascent-A-Snakebite-Generator'"
+                        class="m1d4" />
                 </div>
             </div>
             <div id="defending" style="display:none;">
                 <div id="smokeDef">
                 </div>
                 <div id="mollyDef" style="display:none;">
-                    <input type="image" src="../../Assets/Icons/Snakebite.png" onclick="location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ';" class="button4" value="Button 4"/>
+                    <input type="image" src="../../Assets/Icons/Snakebite.png"
+                        onclick="location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ';" class="button4" />
                 </div>
             </div>
         </div>
+
+        <div class="home">
+            <button class="btn" onclick="GoHome()">
+                <span class="btn__inner">
+                    <span class="btn__slide"></span>
+                    <span id="button" class="btn__content">Home</span>
+                </span>
+            </button>
+        </div>
+
     </div>
-  </body>
+</body>

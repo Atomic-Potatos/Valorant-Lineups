@@ -10,8 +10,9 @@
     cursor: pointer;
     /* Clean style */
     
+    --background-color: #0f1923;
     --button-text-color: var(--background-color);
-    --button-text-color-hover: var(--button-background-color);
+    --button-text-color-hover: var(--background-color);
     --border-color: #7D8082;
     --button-background-color: #ece8e1;
     --highlight-color: #00c50a;
@@ -125,7 +126,7 @@
     background-color: var(--button-bits-color-hover);
   }
   
-  .btn--light {
+  .btn--viper {
     --button-background-color: var(--background-color);
     --button-text-color: var(--highlight-color);
     --button-inner-border-color: var(--highlight-color);
@@ -133,9 +134,9 @@
     --button-bits-color-hover: #ece8e1;
   }
   
-  .btn--light-toggled {
+  .btn--viper-toggled {
     --button-background-color: var(--highlight-color);
-    --button-text-color: #ece8e1;
+    --button-text-color: var(--background-color);
     --button-inner-border-color: var(--highlight-color);
     --button-text-color-hover: #ece8e1;
     --button-bits-color-hover: #ece8e1;

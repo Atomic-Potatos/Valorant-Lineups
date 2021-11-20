@@ -166,7 +166,7 @@ body {
   background-color: var(--button-bits-color-hover);
 }
 
-.btn--light {
+.btn--dark {
   --button-background-color: var(--background-color);
   --button-text-color: var(--highlight-color);
   --button-inner-border-color: var(--highlight-color);
@@ -174,7 +174,7 @@ body {
   --button-bits-color-hover: #ece8e1;
 }
 
-.btn--light-toggled {
+.btn--dark-toggled {
   --button-background-color: var(--highlight-color);
   --button-text-color: #ece8e1;
   --button-inner-border-color: var(--highlight-color);
