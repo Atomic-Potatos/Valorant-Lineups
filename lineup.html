@@ -10,18 +10,23 @@
         const urlParams = new URLSearchParams(queryString);
         const map = urlParams.get('map');
         const agent = urlParams.get('agent');
-        const lineup = urlParams.get('lineup');
+        const lineups = JSON.parse(urlParams.get('lineups'));
 
         window.onload = function(){
-          var image = "Valorant-Lineups/"+agent+"/"+map+"/"+lineup+".jpg";
-          document.getElementById('image').src = image;
+          for (i=0; i<lineups.length; i++) {
+            var img = document.createElement('img');
+            img.src = "Valorant-Lineups/"+agent+"/"+map+"/"+lineups[i]+".jpg";
+            document.getElementById('body').appendChild(img);
+          }
+
+            
         };
     </script>
   </head>
 
   <body>
-    <div class="imagewrap">
-      <img src="fail.jpg" id="image">
+    <div id='body' class="imagewrap">
+
     </div>
   </body>
 </html>
