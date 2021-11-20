@@ -24,7 +24,72 @@
         .button4 {max-width:3vw;max-height:3vh; position:absolute;top:23%;left:75%;}   
     </style>
     <script>
-        window.onload = function(){};
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const state = JSON.parse(urlParams.get('state'));
+
+        window.onload = function() {
+            if (state.length == 2) {
+                var def = document.getElementById("defending");
+                var att = document.getElementById("attacking");
+                var btnAtt = document.getElementById("btnAttack");
+                var btnDef = document.getElementById("btnDefend");
+                var btnAtttoggled = document.getElementById("btnAttack-toggled");
+                var btnDeftoggled = document.getElementById("btnDefend-toggled");
+                if (state[0] == 'attacking') {
+                    btnAtt.style.display = "none";
+                    btnAtttoggled.style.display = "block";
+
+                    btnDef.style.display = "block";
+                    btnDeftoggled.style.display = "none";
+
+                    att.style.display = "block";
+                    def.style.display = "none";
+                } else {
+                    btnAtt.style.display = "block";
+                    btnAtttoggled.style.display = "none";
+
+                    btnDef.style.display = "none";
+                    btnDeftoggled.style.display = "block";
+
+                    att.style.display = "none"
+                    def.style.display = "block"
+                }
+
+                var smokeAtt = document.getElementById("smokeAtt");
+                var smokeDef = document.getElementById("smokeDef");
+                var mollyAtt = document.getElementById("mollyAtt");
+                var mollyDef = document.getElementById("mollyDef");
+
+                var btnSmk = document.getElementById("btnSmokes");
+                var btnMol = document.getElementById("btnMolly");
+                var btnSmkToggled = document.getElementById("btnSmokes-toggled");
+                var btnMolToggled = document.getElementById("btnMolly-toggled");
+                if (state[1] == 'smokes') {
+                    btnSmk.style.display = "none";
+                    btnSmkToggled.style.display = "block";
+
+                    btnMol.style.display = "block";
+                    btnMolToggled.style.display = "none";
+
+                    smokeAtt.style.display = "block";
+                    smokeDef.style.display = "block";
+                    mollyAtt.style.display = "none";
+                    mollyDef.style.display = "none";
+                } else {
+                    btnSmk.style.display = "block";
+                    btnSmkToggled.style.display = "none";
+
+                    btnMol.style.display = "none";
+                    btnMolToggled.style.display = "block";
+
+                    smokeAtt.style.display = "none";
+                    smokeDef.style.display = "none";
+                    mollyAtt.style.display = "block";
+                    mollyDef.style.display = "block";
+                }
+            }
+        };
 
         function Toggle() {
             var def = document.getElementById("defending");
@@ -34,7 +99,6 @@
             var btnAtttoggled = document.getElementById("btnAttack-toggled");
             var btnDeftoggled = document.getElementById("btnDefend-toggled");
             if (btnAtt.style.display === "none") {
-
                 btnAtt.style.display = "block";
                 btnAtttoggled.style.display = "none";
 
@@ -186,19 +250,19 @@
                 </div>
                 <div id="mollyAtt" style="display:none;">
                     <input type="image" src="../../Assets/Icons/Snakebite/Snakebite-dark_blue.png"
-                        onclick="location.href='../../lineup.html?map=ascent&agent=viper&lineups=[&#34Viper-Ascent-A-Snakebite-Generator&#34,&#34Ascent-A-Lobby-Gen&#34]'"
+                        onclick="location.href='../../lineup.html?map=ascent&agent=viper&lineups=[&#34Viper-Ascent-A-Snakebite-Generator&#34,&#34Ascent-A-Lobby-Gen&#34]&state=[&#34attacking&#34,&#34snakebite&#34]'"
                         class="molly1" />
                     <input type="image" src="../../Assets/Icons/Dot/Dot-dark_blue.png"
-                        onclick="location.href='../../lineup.html?map=ascent&agent=viper&lineups=[&#34Viper-Ascent-A-Snakebite-Generator&#34,&#34Ascent-A-Lobby-Gen&#34]'"
+                        onclick="location.href='../../lineup.html?map=ascent&agent=viper&lineups=[&#34Viper-Ascent-A-Snakebite-Generator&#34,&#34Ascent-A-Lobby-Gen&#34]&state=[&#34attacking&#34,&#34snakebite&#34]'"
                         class="m1d1" />
                     <input type="image" src="../../Assets/Icons/Dot/Dot-dark_blue.png"
-                        onclick="location.href='../../lineup.html?map=ascent&agent=viper&lineups=[&#34Viper-Ascent-A-Snakebite-Generator&#34,&#34Ascent-A-Lobby-Gen&#34]'"
+                        onclick="location.href='../../lineup.html?map=ascent&agent=viper&lineups=[&#34Viper-Ascent-A-Snakebite-Generator&#34,&#34Ascent-A-Lobby-Gen&#34]&state=[&#34attacking&#34,&#34snakebite&#34]'"
                         class="m1d2" />
                     <input type="image" src="../../Assets/Icons/Dot/Dot-dark_blue.png"
-                        onclick="location.href='../../lineup.html?map=ascent&agent=viper&lineups=[&#34Viper-Ascent-A-Snakebite-Generator&#34,&#34Ascent-A-Lobby-Gen&#34]'"
+                        onclick="location.href='../../lineup.html?map=ascent&agent=viper&lineups=[&#34Viper-Ascent-A-Snakebite-Generator&#34,&#34Ascent-A-Lobby-Gen&#34]&state=[&#34attacking&#34,&#34snakebite&#34]'"
                         class="m1d3" />
                     <input type="image" src="../../Assets/Icons/Dot/Dot-dark_blue.png"
-                        onclick="location.href='../../lineup.html?map=ascent&agent=viper&lineups=[&#34Viper-Ascent-A-Snakebite-Generator&#34,&#34Ascent-A-Lobby-Gen&#34]'"
+                        onclick="location.href='../../lineup.html?map=ascent&agent=viper&lineups=[&#34Viper-Ascent-A-Snakebite-Generator&#34,&#34Ascent-A-Lobby-Gen&#34]&state=[&#34attacking&#34,&#34snakebite&#34]'"
                         class="m1d4" />
                 </div>
             </div>

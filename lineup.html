@@ -11,6 +11,7 @@
         const map = urlParams.get('map');
         const agent = urlParams.get('agent');
         const lineups = JSON.parse(urlParams.get('lineups'));
+        const state = urlParams.get('state');
 
         window.onload = function(){
           for (i=0; i<lineups.length; i++) {
@@ -21,7 +22,7 @@
         };
 
         function GoBack() {
-          window.open("agents/"+agent+"/"+map+".html","_self")
+          window.open("agents/"+agent+"/"+map+".html?state="+state,"_self")
         }
 
     </script>
