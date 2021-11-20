@@ -12,10 +12,10 @@
         const agent = urlParams.get('agent');
         const lineup = urlParams.get('lineup');
 
-        setTimeout(function(){
-        var image = "Valorant Lineups/"+agent+"/"+map+"/"+lineup+".jpg";
-        document.getElementById('image').src = image;
-        }, 0);
+        window.onload = function(){
+          var image = "Valorant Lineups/"+agent+"/"+map+"/"+lineup+".jpg";
+          document.getElementById('image').src = image;
+        };
     </script>
   </head>
 
