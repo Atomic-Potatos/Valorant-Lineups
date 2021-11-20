@@ -17,16 +17,30 @@
             var img = document.createElement('img');
             img.src = "Valorant-Lineups/"+agent+"/"+map+"/"+lineups[i]+".jpg";
             document.getElementById('body').appendChild(img);
-          }
-
-            
+          }  
         };
+
+        function GoBack() {
+          window.open("agents/"+agent+"/"+map+".html","_self")
+        }
+
     </script>
   </head>
 
   <body>
-    <div id='body' class="imagewrap">
+    <div class="wrapper">
+      <div id='body' class="imagewrap">
 
+      </div>
+      
+      <div class="home">
+        <button class="btn btn--home" onclick="GoBack()">
+            <span class="btn__inner">
+                <span class="btn__slide"></span>
+                <span id="button" class="btn__content">Back</span>
+            </span>
+        </button>
+      </div>
     </div>
   </body>
 </html>
