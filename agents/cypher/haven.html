@@ -25,14 +25,14 @@
         const state = JSON.parse(urlParams.get('state'));
 
         window.onload = function() {
-            if (state.length == 2) {
+            if (state.length == 1) {
                 var def = document.getElementById("defending");
                 var att = document.getElementById("attacking");
                 var btnAtt = document.getElementById("btnAttack");
                 var btnDef = document.getElementById("btnDefend");
                 var btnAtttoggled = document.getElementById("btnAttack-toggled");
                 var btnDeftoggled = document.getElementById("btnDefend-toggled");
-                if (state[0] == 'attacking') {
+                if (state[0] == 'setup') {
                     btnAtt.style.display = "none";
                     btnAtttoggled.style.display = "block";
 
@@ -116,42 +116,6 @@
             }
         }
 
-        function ToggleItem() {
-            var smokeAtt = document.getElementById("smokeAtt");
-            var smokeDef = document.getElementById("smokeDef");
-            var mollyAtt = document.getElementById("mollyAtt");
-            var mollyDef = document.getElementById("mollyDef");
-
-            var btnSmk = document.getElementById("btnSmokes");
-            var btnMol = document.getElementById("btnMolly");
-            var btnSmkToggled = document.getElementById("btnSmokes-toggled");
-            var btnMolToggled = document.getElementById("btnMolly-toggled");
-
-            if (btnSmk.style.display === "none") {
-                btnSmk.style.display = "block";
-                btnSmkToggled.style.display = "none";
-
-                btnMol.style.display = "none";
-                btnMolToggled.style.display = "block";
-
-                smokeAtt.style.display = "none";
-                smokeDef.style.display = "none";
-                mollyAtt.style.display = "block";
-                mollyDef.style.display = "block";
-            } else {
-                btnSmk.style.display = "none";
-                btnSmkToggled.style.display = "block";
-
-                btnMol.style.display = "block";
-                btnMolToggled.style.display = "none";
-
-                smokeAtt.style.display = "block";
-                smokeDef.style.display = "block";
-                mollyAtt.style.display = "none";
-                mollyDef.style.display = "none";
-            }
-        }
-
         function GoHome() {
             window.open("../../index.html","_self")
         }
@@ -200,61 +164,19 @@
             </div>
         </div>
 
-        <div class="row">
-            <div id="btnSmokes" style="display:none;">
-                <button class="btn-cypher btn--cypher" onclick="ToggleItem()">
-                    <span class="btn__inner">
-                        <span class="btn__slide"></span>
-                        <span id="button" class="btn__content">Smokes</span>
-                    </span>
-                </button>
-            </div>
-            <div id="btnSmokes-toggled">
-                <button class="btn-cypher btn--cypher-toggled">
-                    <span class="btn__inner">
-                        <span class="btn__slide"></span>
-                        <span id="button" class="btn__content">Smokes</span>
-                    </span>
-                </button>
-            </div>
-            <div id="btnMolly">
-                <button class="btn-cypher btn--cypher" onclick="ToggleItem()">
-                    <span class="btn__inner">
-                        <span class="btn__slide"></span>
-                        <span id="button" class="btn__content">Snakebite</span>
-                    </span>
-                </button>
-            </div>
-            <div id="btnMolly-toggled" style="display:none;">
-                <button class="btn-cypher btn--cypher-toggled">
-                    <span class="btn__inner">
-                        <span class="btn__slide"></span>
-                        <span id="button" class="btn__content">Snakebite</span>
-                    </span>
-                </button>
-            </div>
-        </div>
-
         <div class="imagewrap">
             <img src="../../Assets/Maps/Haven.png" alt="Haven">
             <div id="attacking">
-                <div id="smokeAtt">
-                    <input type="image" src="../../Assets/Icons/Trapwire.png"
-                        onclick="location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ';" class="trip1" />
-                    <input type="image" src="../../Assets/Icons/Trapwire.png"
-                        onclick="location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ';" class="trip2" />
+                <input type="image" src="../../Assets/Icons/Trapwire.png"
+                    onclick="location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ';" class="trip1" />
+                <input type="image" src="../../Assets/Icons/Trapwire.png"
+                    onclick="location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ';" class="trip2" />
 
-                    <input type="image" src="../../Assets/Icons/Spycam.png"
-                        onclick="location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ';" class="cam1" />
-                </div>
-                <div id="mollyAtt" style="display:none;">
-                </div>
+                <input type="image" src="../../Assets/Icons/Spycam.png"
+                    onclick="location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ';" class="cam1" />
             </div>
             <div id="defending" style="display:none;">
-                <div id="smokeDef">
-                </div>
-                <div id="mollyDef" style="display:none;">
-                </div>
+                
             </div>
         </div>
 
