@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../../main.css">
+    <link rel="stylesheet" href="cypher.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CYPHER x HAVEN</title>
+    <style>
+        .icon {
+            max-width: 10vw;
+            max-height: 10vh;
+        }
+        .imagewrap {display:inline-block;position:relative;}
+        .trip1  {max-width:3vw;max-height:3vh; position:absolute;top:49.5%;left:13.95%;}
+        .trip2  {max-width:3vw;max-height:3vh; position:absolute;top:48.5%;left:34.5%;}
+        
+        .cam1  {max-width:3vw;max-height:3vh; position:absolute;top:47.5%;left:9.5%;}
+
+    </style>
+    <script>
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const state = JSON.parse(urlParams.get('state'));
+
+        window.onload = function() {
+            if (state.length == 2) {
+                var def = document.getElementById("defending");
+                var att = document.getElementById("attacking");
+                var btnAtt = document.getElementById("btnAttack");
+                var btnDef = document.getElementById("btnDefend");
+                var btnAtttoggled = document.getElementById("btnAttack-toggled");
+                var btnDeftoggled = document.getElementById("btnDefend-toggled");
+                if (state[0] == 'attacking') {
+                    btnAtt.style.display = "none";
+                    btnAtttoggled.style.display = "block";
+
+                    btnDef.style.display = "block";
+                    btnDeftoggled.style.display = "none";
+
+                    att.style.display = "block";
+                    def.style.display = "none";
+                } else {
+                    btnAtt.style.display = "block";
+                    btnAtttoggled.style.display = "none";
+
+                    btnDef.style.display = "none";
+                    btnDeftoggled.style.display = "block";
+
+                    att.style.display = "none"
+                    def.style.display = "block"
+                }
+
+                var smokeAtt = document.getElementById("smokeAtt");
+                var smokeDef = document.getElementById("smokeDef");
+                var mollyAtt = document.getElementById("mollyAtt");
+                var mollyDef = document.getElementById("mollyDef");
+
+                var btnSmk = document.getElementById("btnSmokes");
+                var btnMol = document.getElementById("btnMolly");
+                var btnSmkToggled = document.getElementById("btnSmokes-toggled");
+                var btnMolToggled = document.getElementById("btnMolly-toggled");
+                if (state[1] == 'smokes') {
+                    btnSmk.style.display = "none";
+                    btnSmkToggled.style.display = "block";
+
+                    btnMol.style.display = "block";
+                    btnMolToggled.style.display = "none";
+
+                    smokeAtt.style.display = "block";
+                    smokeDef.style.display = "block";
+                    mollyAtt.style.display = "none";
+                    mollyDef.style.display = "none";
+                } else {
+                    btnSmk.style.display = "block";
+                    btnSmkToggled.style.display = "none";
+
+                    btnMol.style.display = "none";
+                    btnMolToggled.style.display = "block";
+
+                    smokeAtt.style.display = "none";
+                    smokeDef.style.display = "none";
+                    mollyAtt.style.display = "block";
+                    mollyDef.style.display = "block";
+                }
+            }
+        };
+
+        function Toggle() {
+            var def = document.getElementById("defending");
+            var att = document.getElementById("attacking");
+            var btnAtt = document.getElementById("btnAttack");
+            var btnDef = document.getElementById("btnDefend");
+            var btnAtttoggled = document.getElementById("btnAttack-toggled");
+            var btnDeftoggled = document.getElementById("btnDefend-toggled");
+            if (btnAtt.style.display === "none") {
+                btnAtt.style.display = "block";
+                btnAtttoggled.style.display = "none";
+
+                btnDef.style.display = "none";
+                btnDeftoggled.style.display = "block";
+
+                att.style.display = "none"
+                def.style.display = "block"
+
+            } else {
+                btnAtt.style.display = "none";
+                btnAtttoggled.style.display = "block";
+
+                btnDef.style.display = "block";
+                btnDeftoggled.style.display = "none";
+
+                att.style.display = "block";
+                def.style.display = "none";
+            }
+        }
+
+        function ToggleItem() {
+            var smokeAtt = document.getElementById("smokeAtt");
+            var smokeDef = document.getElementById("smokeDef");
+            var mollyAtt = document.getElementById("mollyAtt");
+            var mollyDef = document.getElementById("mollyDef");
+
+            var btnSmk = document.getElementById("btnSmokes");
+            var btnMol = document.getElementById("btnMolly");
+            var btnSmkToggled = document.getElementById("btnSmokes-toggled");
+            var btnMolToggled = document.getElementById("btnMolly-toggled");
+
+            if (btnSmk.style.display === "none") {
+                btnSmk.style.display = "block";
+                btnSmkToggled.style.display = "none";
+
+                btnMol.style.display = "none";
+                btnMolToggled.style.display = "block";
+
+                smokeAtt.style.display = "none";
+                smokeDef.style.display = "none";
+                mollyAtt.style.display = "block";
+                mollyDef.style.display = "block";
+            } else {
+                btnSmk.style.display = "none";
+                btnSmkToggled.style.display = "block";
+
+                btnMol.style.display = "block";
+                btnMolToggled.style.display = "none";
+
+                smokeAtt.style.display = "block";
+                smokeDef.style.display = "block";
+                mollyAtt.style.display = "none";
+                mollyDef.style.display = "none";
+            }
+        }
+
+        function GoHome() {
+            window.open("../../index.html","_self")
+        }
+
+    </script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>
+            <p id="title">CYPHER x HAVEN</p>
+        </h1>
+
+        <div class="row">
+            <div id="btnAttack" style="display:none;">
+                <button class="btn btn--dark" onclick="Toggle()">
+                    <span class="btn__inner">
+                        <span class="btn__slide"></span>
+                        <span id="button" class="btn__content">Setup</span>
+                    </span>
+                </button>
+            </div>
+            <div id="btnAttack-toggled">
+                <button class="btn btn--dark-toggled">
+                    <span class="btn__inner">
+                        <span class="btn__light-toggled"></span>
+                        <span id="button" class="btn__content">Setup</span>
+                    </span>
+                </button>
+            </div>
+            <div id="btnDefend">
+                <button class="btn btn--dark" onclick="Toggle()">
+                    <span class="btn__inner">
+                        <span class="btn__slidedave2d"></span>
+                        <span id="button" class="btn__content">Retake</span>
+                    </span>
+                </button>
+            </div>
+            <div id="btnDefend-toggled" style="display:none;">
+                <button class="btn btn--dark-toggled">
+                    <span class="btn__inner">
+                        <span class="btn__slidedave2d-toggled"></span>
+                        <span id="button" class="btn__content">Retake</span>
+                    </span>
+                </button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div id="btnSmokes" style="display:none;">
+                <button class="btn-cypher btn--cypher" onclick="ToggleItem()">
+                    <span class="btn__inner">
+                        <span class="btn__slide"></span>
+                        <span id="button" class="btn__content">Smokes</span>
+                    </span>
+                </button>
+            </div>
+            <div id="btnSmokes-toggled">
+                <button class="btn-cypher btn--cypher-toggled">
+                    <span class="btn__inner">
+                        <span class="btn__slide"></span>
+                        <span id="button" class="btn__content">Smokes</span>
+                    </span>
+                </button>
+            </div>
+            <div id="btnMolly">
+                <button class="btn-cypher btn--cypher" onclick="ToggleItem()">
+                    <span class="btn__inner">
+                        <span class="btn__slide"></span>
+                        <span id="button" class="btn__content">Snakebite</span>
+                    </span>
+                </button>
+            </div>
+            <div id="btnMolly-toggled" style="display:none;">
+                <button class="btn-cypher btn--cypher-toggled">
+                    <span class="btn__inner">
+                        <span class="btn__slide"></span>
+                        <span id="button" class="btn__content">Snakebite</span>
+                    </span>
+                </button>
+            </div>
+        </div>
+
+        <div class="imagewrap">
+            <img src="../../Assets/Maps/Haven.png" alt="Haven">
+            <div id="attacking">
+                <div id="smokeAtt">
+                    <input type="image" src="../../Assets/Icons/Trapwire.png"
+                        onclick="location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ';" class="trip1" />
+                    <input type="image" src="../../Assets/Icons/Trapwire.png"
+                        onclick="location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ';" class="trip2" />
+
+                    <input type="image" src="../../Assets/Icons/Spycam.png"
+                        onclick="location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ';" class="cam1" />
+                </div>
+                <div id="mollyAtt" style="display:none;">
+                </div>
+            </div>
+            <div id="defending" style="display:none;">
+                <div id="smokeDef">
+                </div>
+                <div id="mollyDef" style="display:none;">
+                </div>
+            </div>
+        </div>
+
+        <div class="home">
+            <button class="btn btn--home" onclick="GoHome()">
+                <span class="btn__inner">
+                    <span class="btn__slide"></span>
+                    <span id="button" class="btn__content">Home</span>
+                </span>
+            </button>
+        </div>
+
+    </div>
+</body>
