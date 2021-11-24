@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <link rel="stylesheet" href="../../main.css">
+    <link rel="stylesheet" href="sova.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agent Select</title>
+    <title>SOVA x BIND</title>
     <style>
         .icon {
             max-width: 10vw;
             max-height: 10vh;
         }
         .imagewrap {display:inline-block;position:relative;}
-        .button1 {max-width:3vw;max-height:3vh;height=auto;  position:absolute;top:64%;left:33%;}
-        .button2 {max-width:3vw;max-height:3vh;height=auto;  position:absolute;top:70%;left:70%;}
-        .button3 {max-width:3vw;max-height:3vh;height=auto;  position:absolute;top:57%;left:50%;}
-        .button4 {max-width:3vw;max-height:3vh;height=auto;  position:absolute;top:23%;left:75%;}   
+        .molly1  {max-width:3vw;max-height:3vh; position:absolute;top:53%;left:69.5%;}
+        .m1d1    {max-width:1vw;max-height:1vh; position:absolute;top:34%;left:80.5%;}
+        .m1d2    {max-width:1vw;max-height:1vh; position:absolute;top:31.3%;left:81.8%;}
+        .m1d3    {max-width:1vw;max-height:1vh; position:absolute;top:28.5%;left:80.5%;}
+        .m1d4    {max-width:1vw;max-height:1vh; position:absolute;top:31.3%;left:79.1%;}
+
+        .button2 {max-width:3vw;max-height:3vh; position:absolute;top:70%;left:70%;}
+        .button3 {max-width:3vw;max-height:3vh; position:absolute;top:57%;left:50%;}
+        .button4 {max-width:3vw;max-height:3vh; position:absolute;top:23%;left:75%;}   
     </style>
     <script>
-        window.onload = function(){ };
+        window.onload = function(){};
 
         function Toggle() {
             var def = document.getElementById("defending");
@@ -44,59 +51,133 @@
                 btnDef.style.display = "block";
                 btnDeftoggled.style.display = "none";
 
-                att.style.display = "block"
-                def.style.display = "none"
+                att.style.display = "block";
+                def.style.display = "none";
             }
         }
 
+        function ToggleItem() {
+            var smokeAtt = document.getElementById("smokeAtt");
+            var smokeDef = document.getElementById("smokeDef");
+            var mollyAtt = document.getElementById("mollyAtt");
+            var mollyDef = document.getElementById("mollyDef");
+
+            var btnSmk = document.getElementById("btnSmokes");
+            var btnMol = document.getElementById("btnMolly");
+            var btnSmkToggled = document.getElementById("btnSmokes-toggled");
+            var btnMolToggled = document.getElementById("btnMolly-toggled");
+
+            if (btnSmk.style.display === "none") {
+                btnSmk.style.display = "block";
+                btnSmkToggled.style.display = "none";
+
+                btnMol.style.display = "none";
+                btnMolToggled.style.display = "block";
+
+                smokeAtt.style.display = "none";
+                smokeDef.style.display = "none";
+                mollyAtt.style.display = "block";
+                mollyDef.style.display = "block";
+            } else {
+                btnSmk.style.display = "none";
+                btnSmkToggled.style.display = "block";
+
+                btnMol.style.display = "block";
+                btnMolToggled.style.display = "none";
+
+                smokeAtt.style.display = "block";
+                smokeDef.style.display = "block";
+                mollyAtt.style.display = "none";
+                mollyDef.style.display = "none";
+            }
+        }
+
+        function GoHome() {
+            window.open("../../index.html","_self")
+        }
+
     </script>
-  </head>
+</head>
 
-  <body>
-    <div>
-        <div class="wrapper">
-            <h1><p id="title">SOVA x BIND</p></h1>
+<body>
+    <div class="wrapper">
+        <h1>
+            <p id="title">SOVA x BIND</p> 
+        </h1>
 
-            <div class="row">
+        <div class="row">
             <div id="btnAttack" style="display:none;">
-                <button class="btn btn--light" onclick="Toggle()">
+                <button class="btn btn--dark" onclick="Toggle()">
                     <span class="btn__inner">
-                    <span class="btn__slide"></span>
-                    <span id="button" class="btn__content">Attacking</span>
+                        <span class="btn__slide"></span>
+                        <span id="button" class="btn__content">Attacking</span>
                     </span>
                 </button>
             </div>
             <div id="btnAttack-toggled">
-              <button class="btn btn--light-toggled" >
-                  <span class="btn__inner">
-                  <span class="btn__light-toggled"></span>
-                  <span id="button" class="btn__content">Attacking</span>
-                  </span>
-              </button>
+                <button class="btn btn--dark-toggled">
+                    <span class="btn__inner">
+                        <span class="btn__light-toggled"></span>
+                        <span id="button" class="btn__content">Attacking</span>
+                    </span>
+                </button>
             </div>
             <div id="btnDefend">
                 <button class="btn btn--dave2d" onclick="Toggle()">
                     <span class="btn__inner">
-                    <span class="btn__slidedave2d"></span>
-                    <span id="button" class="btn__content">Defending</span>
+                        <span class="btn__slidedave2d"></span>
+                        <span id="button" class="btn__content">Defending</span>
                     </span>
                 </button>
             </div>
             <div id="btnDefend-toggled" style="display:none;">
-            <button class="btn btn--dave2d-toggled">
-                <span class="btn__inner">
-                <span class="btn__slidedave2d-toggled"></span>
-                <span id="button" class="btn__content">Defending</span>
-                </span>
-            </button>
+                <button class="btn btn--dave2d-toggled">
+                    <span class="btn__inner">
+                        <span class="btn__slidedave2d-toggled"></span>
+                        <span id="button" class="btn__content">Defending</span>
+                    </span>
+                </button>
             </div>
-          </div>
+        </div>
+
+        <div class="row">
+            <div id="btnSmokes" style="display:none;">
+                <button class="btn-sova btn--sova" onclick="ToggleItem()">
+                    <span class="btn__inner">
+                        <span class="btn__slide"></span>
+                        <span id="button" class="btn__content">Recon Bolt</span>
+                    </span>
+                </button>
+            </div>
+            <div id="btnSmokes-toggled">
+                <button class="btn-sova btn--sova-toggled">
+                    <span class="btn__inner">
+                        <span class="btn__slide"></span>
+                        <span id="button" class="btn__content">Recon Bolt</span>
+                    </span>
+                </button>
+            </div>
+            <div id="btnMolly">
+                <button class="btn-sova btn--sova" onclick="ToggleItem()">
+                    <span class="btn__inner">
+                        <span class="btn__slide"></span>
+                        <span id="button" class="btn__content">Shock Bolt</span>
+                    </span>
+                </button>
+            </div>
+            <div id="btnMolly-toggled" style="display:none;">
+                <button class="btn-sova btn--sova-toggled">
+                    <span class="btn__inner">
+                        <span class="btn__slide"></span>
+                        <span id="button" class="btn__content">Shock Bolt</span>
+                    </span>
+                </button>
+            </div>
         </div>
 
         <div class="imagewrap">
             <img src="../../Assets/Maps/Bind.png" alt="Bind">
             <div id="attacking">
-                <input type="image" src="../../Assets/Icons/Recon_bolt/Recon_Bolt-red.png" onclick="location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ';" class="button1" value="Button 1"/>
                 <input type="image" src="../../Assets/Icons/Recon_bolt/Recon_Bolt-orange.png" onclick="location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ';" class="button2" value="Button 2"/>
                 <input type="image" src="../../Assets/Icons/Recon_bolt/Recon_Bolt-light_blue.png" onclick="location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ';" class="button3" value="Button 3"/>
             </div>
@@ -104,5 +185,15 @@
                 <input type="image" src="../../Assets/Icons/Recon_bolt/Recon_Bolt-dark_blue.png" onclick="location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ';" class="button4" value="Button 4"/>
             </div>
         </div>
+
+        <div class="home">
+            <button class="btn btn--home" onclick="GoHome()">
+                <span class="btn__inner">
+                    <span class="btn__slide"></span>
+                    <span id="button" class="btn__content">Home</span>
+                </span>
+            </button>
+        </div>
+
     </div>
-  </body>
+</body>
