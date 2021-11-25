@@ -13,83 +13,179 @@
             max-height: 10vh;
         }
         .imagewrap {display:inline-block;position:relative;}
-        .molly1  {max-width:3vw;max-height:3vh; position:absolute;top:53%;left:69.5%;}
-        .m1d1    {max-width:1vw;max-height:1vh; position:absolute;top:34%;left:80.5%;}
-        .m1d2    {max-width:1vw;max-height:1vh; position:absolute;top:31.3%;left:81.8%;}
-        .m1d3    {max-width:1vw;max-height:1vh; position:absolute;top:28.5%;left:80.5%;}
-        .m1d4    {max-width:1vw;max-height:1vh; position:absolute;top:31.3%;left:79.1%;}
 
-        .button2 {max-width:3vw;max-height:3vh; position:absolute;top:70%;left:70%;}
-        .button3 {max-width:3vw;max-height:3vh; position:absolute;top:57%;left:50%;}
-        .button4 {max-width:3vw;max-height:3vh; position:absolute;top:23%;left:75%;}   
+        .heavenRecon {max-width:3vw;max-height:3vh; position:absolute;top:22.5%;left:75.5%;}
+        .r1dh1    {max-width:1vw;max-height:1vh; position:absolute;top:63%;left:82%;}
+        .r1dh2    {max-width:1vw;max-height:1vh; position:absolute;top:54%;left:63%;}
+        .r1dh3    {max-width:1vw;max-height:1vh; position:absolute;top:43.5%;left:42.5%;}
+        .r1dh4    {max-width:1vw;max-height:1vh; position:absolute;top:46%;left:29%;}
+        .r1dh5    {max-width:1vw;max-height:1vh; position:absolute;top:56%;left:21%;}
+
+        .retakeBRecon {max-width:3vw;max-height:3vh; position:absolute;top:14%;left:47%;}
+        .r2drb1       {max-width:1vw;max-height:1vh; position:absolute;top:29.5%;left:33.5%;}
+        
+        .aGodArrow {max-width:3vw;max-height:3vh; position:absolute;top:55%;left:70%;}
+        .r1aag     {max-width:1vw;max-height:1vh; position:absolute;top:34%;left:65.5%;}
+
+        .reconToHookah {max-width:3vw;max-height:3vh; position:absolute;top:58%;left:51%;}
+        .r2ahk         {max-width:1vw;max-height:1vh; position:absolute;top:46%;left:31%;}
+
+        .slowLongRecon {max-width:3vw;max-height:3vh; position:absolute;top:66%;left:31%;}
+        .r3ab1         {max-width:1vw;max-height:1vh; position:absolute;top:29%;left:29%;}
+        
+        .backBRecon {max-width:3vw;max-height:3vh; position:absolute;top:60%;left:28.5%;}
+        .r3ab2      {max-width:1vw;max-height:1vh; position:absolute;top:22.5%;left:27%;}
+           
     </style>
     <script>
         window.onload = function(){};
 
         function Toggle() {
-            var def = document.getElementById("defending");
-            var att = document.getElementById("attacking");
+
+            //Things on map
+            var defRecon = document.getElementById("defendingRecon");
+            var attRecon = document.getElementById("attackingRecon");
+            var defShock = document.getElementById("defendingShock");
+            var attShock = document.getElementById("attackingShock");
+
+            //Attacking and defending buttons
             var btnAtt = document.getElementById("btnAttack");
             var btnDef = document.getElementById("btnDefend");
-            var btnAtttoggled = document.getElementById("btnAttack-toggled");
-            var btnDeftoggled = document.getElementById("btnDefend-toggled");
-            if (btnAtt.style.display === "none") {
+            var btnAttToggled = document.getElementById("btnAttack-toggled");
+            var btnDefToggled = document.getElementById("btnDefend-toggled");
 
-                btnAtt.style.display = "block";
-                btnAtttoggled.style.display = "none";
+            // Recon and Shock buttons
+            var reconBtn = document.getElementById("btnRecon");
+            var shockBtn = document.getElementById("btnShock");
 
-                btnDef.style.display = "none";
-                btnDeftoggled.style.display = "block";
+            // if attack toggled and recon toggled -> toggle defend and show defend recon
+            if (btnAtt.style.display == 'none' && reconBtn.style.display == 'none') {
 
-                att.style.display = "none"
-                def.style.display = "block"
+                btnAtt.style.display = 'block'
+                btnDefToggled.style.display = 'block'
+                defRecon.style.display = 'block'
 
-            } else {
-                btnAtt.style.display = "none";
-                btnAtttoggled.style.display = "block";
-
-                btnDef.style.display = "block";
-                btnDeftoggled.style.display = "none";
-
-                att.style.display = "block";
-                def.style.display = "none";
+                btnAttToggled.style.display = 'none'
+                btnDef.style.display = 'none'
+                attRecon.style.display = 'none'
+                attShock.style.display = 'none'
+                defShock.style.display = 'none'
             }
+
+            // if attack toggled and shock toggled -> toggle defend and show defend shock
+            else if (btnAtt.style.display == 'none' && shockBtn.style.display == 'none') {
+                
+                btnAtt.style.display = 'block'
+                btnDefToggled.style.display = 'block'
+                defShock.style.display = 'block'
+
+                btnAttToggled.style.display = 'none'
+                btnDef.style.display = 'none'
+                attRecon.style.display = 'none'
+                defRecon.style.display = 'none'
+                attShock.style.display = 'none'
+            }
+
+            // if defend toggled and recon toggled -> toggle attack and show attack recon
+            else if (btnDef.style.display == 'none' && reconBtn.style.display == 'none') {
+                
+                btnDef.style.display = 'block'
+                btnAttToggled.style.display = 'block'
+                attRecon.style.display = 'block'
+
+                btnDefToggled.style.display = 'none'
+                btnAtt.style.display = 'none'
+                defShock.style.display = 'none'
+                attShock.style.display = 'none'
+                defRecon.style.display = 'none'
+            }
+
+            // if defend toggled and shock toggled -> toggle attack and show attack shock
+            else if (btnDef.style.display == 'none' && shockBtn.style.display == 'none') {
+                
+                btnDef.style.display = 'block'
+                btnAttToggled.style.display = 'block'
+                attShock.style.display = 'block'
+
+                btnDefToggled.style.display = 'none'
+                btnAtt.style.display = 'none'
+                defShock.style.display = 'none'
+                attRecon.style.display = 'none'
+                defRecon.style.display = 'none'
+            }
+
         }
 
         function ToggleItem() {
-            var smokeAtt = document.getElementById("smokeAtt");
-            var smokeDef = document.getElementById("smokeDef");
-            var mollyAtt = document.getElementById("mollyAtt");
-            var mollyDef = document.getElementById("mollyDef");
+            var defRecon = document.getElementById("defendingRecon");
+            var attRecon = document.getElementById("attackingRecon");
+            var defShock = document.getElementById("defendingShock");
+            var attShock = document.getElementById("attackingShock");
 
-            var btnSmk = document.getElementById("btnSmokes");
-            var btnMol = document.getElementById("btnMolly");
-            var btnSmkToggled = document.getElementById("btnSmokes-toggled");
-            var btnMolToggled = document.getElementById("btnMolly-toggled");
+            var btnRecon = document.getElementById("btnRecon");
+            var btnShock = document.getElementById("btnShock");
+            var btnReconToggled = document.getElementById("btnRecon-toggled");
+            var btnShockToggled = document.getElementById("btnShock-toggled");
 
-            if (btnSmk.style.display === "none") {
-                btnSmk.style.display = "block";
-                btnSmkToggled.style.display = "none";
+            var btnAtt = document.getElementById("btnAttack");
+            var btnDef = document.getElementById("btnDefend");
 
-                btnMol.style.display = "none";
-                btnMolToggled.style.display = "block";
+            // if recon toggled and attack toggled -> toggle shock and show attack shock
+            if (btnRecon.style.display == 'none' && btnAtt.style.display == 'none') {
 
-                smokeAtt.style.display = "none";
-                smokeDef.style.display = "none";
-                mollyAtt.style.display = "block";
-                mollyDef.style.display = "block";
-            } else {
-                btnSmk.style.display = "none";
-                btnSmkToggled.style.display = "block";
+                btnRecon.style.display = 'block'
+                btnShockToggled.style.display = 'block'
+                attShock.style.display = 'block'
 
-                btnMol.style.display = "block";
-                btnMolToggled.style.display = "none";
-
-                smokeAtt.style.display = "block";
-                smokeDef.style.display = "block";
-                mollyAtt.style.display = "none";
-                mollyDef.style.display = "none";
+                btnReconToggled.style.display = 'none'
+                btnShock.style.display = 'none'
+                attRecon.style.display = 'none'
+                defRecon.style.display = 'none'
+                defShock.style.display = 'none'
             }
+
+            // if recon toggled and defend toggled -> toggle shock and show defend shock
+            else if (btnRecon.style.display == 'none' && btnDef.style.display == 'none') {
+                
+                btnRecon.style.display = 'block'
+                btnShockToggled.style.display = 'block'
+                defShock.style.display = 'block'
+
+                btnReconToggled.style.display = 'none'
+                btnShock.style.display = 'none'
+                attRecon.style.display = 'none'
+                defRecon.style.display = 'none'
+                attShock.style.display = 'none'
+            }
+
+            // if shock toggled and attack toggled -> toggle recon and show attack recon
+            else if (btnShock.style.display == 'none' && btnAtt.style.display == 'none') {
+                
+                btnShock.style.display = 'block'
+                btnReconToggled.style.display = 'block'
+                attRecon.style.display = 'block'
+
+                btnShockToggled.style.display = 'none'
+                btnRecon.style.display = 'none'
+                attShock.style.display = 'none'
+                defShock.style.display = 'none'
+                defRecon.style.display = 'none'
+            }
+
+            // if shock toggled and defend toggled -> toggle recon and show defend recon
+            else if (btnShock.style.display == 'none' && btnDef.style.display == 'none') {
+                
+                btnShock.style.display = 'block'
+                btnReconToggled.style.display = 'block'
+                defRecon.style.display = 'block'
+
+                btnShockToggled.style.display = 'none'
+                btnRecon.style.display = 'none'
+                attShock.style.display = 'none'
+                defShock.style.display = 'none'
+                attRecon.style.display = 'none'
+            }
+
         }
 
         function GoHome() {
@@ -141,7 +237,7 @@
         </div>
 
         <div class="row">
-            <div id="btnSmokes" style="display:none;">
+            <div id="btnRecon" style="display:none;">
                 <button class="btn-sova btn--sova" onclick="ToggleItem()">
                     <span class="btn__inner">
                         <span class="btn__slide"></span>
@@ -149,7 +245,7 @@
                     </span>
                 </button>
             </div>
-            <div id="btnSmokes-toggled">
+            <div id="btnRecon-toggled">
                 <button class="btn-sova btn--sova-toggled">
                     <span class="btn__inner">
                         <span class="btn__slide"></span>
@@ -157,7 +253,7 @@
                     </span>
                 </button>
             </div>
-            <div id="btnMolly">
+            <div id="btnShock">
                 <button class="btn-sova btn--sova" onclick="ToggleItem()">
                     <span class="btn__inner">
                         <span class="btn__slide"></span>
@@ -165,7 +261,7 @@
                     </span>
                 </button>
             </div>
-            <div id="btnMolly-toggled" style="display:none;">
+            <div id="btnShock-toggled" style="display:none;">
                 <button class="btn-sova btn--sova-toggled">
                     <span class="btn__inner">
                         <span class="btn__slide"></span>
@@ -177,13 +273,43 @@
 
         <div class="imagewrap">
             <img src="../../Assets/Maps/Bind.png" alt="Bind">
-            <div id="attacking">
-                <input type="image" src="../../Assets/Icons/Recon_bolt/Recon_Bolt-orange.png" onclick="location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ';" class="button2" value="Button 2"/>
-                <input type="image" src="../../Assets/Icons/Recon_bolt/Recon_Bolt-light_blue.png" onclick="location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ';" class="button3" value="Button 3"/>
+            
+            <div id="attackingRecon">
+                <input type="image" src="../../Assets/Icons/Recon_bolt/Recon_Bolt-orange.png" class="aGodArrow" value="A god arrow"/>
+                <input type="image" src="../../Assets/Icons/Dot/Dot-orange.png" class="r1aag"/>
+
+                <input type="image" src="../../Assets/Icons/Recon_bolt/Recon_Bolt-light_blue.png" class="reconToHookah" value="recon To Hookah"/>
+                <input type="image" src="../../Assets/Icons/Dot/Dot-light_blue.png" class="r2ahk"/>
+
+                <input type="image" src="../../Assets/Icons/Recon_bolt/Recon_Bolt-red.png" class="slowLongRecon" value="slow Long Recon"/>
+                <input type="image" src="../../Assets/Icons/Dot/Dot-red.png" class="r3ab1"/>
+
+                <input type="image" src="../../Assets/Icons/Recon_bolt/Recon_Bolt-yellow.png" class="backBRecon" value="back B Recon"/>
+                <input type="image" src="../../Assets/Icons/Dot/Dot-yellow.png" class="r3ab2"/>
+
             </div>
-            <div id="defending" style="display:none;">
-                <input type="image" src="../../Assets/Icons/Recon_bolt/Recon_Bolt-dark_blue.png" onclick="location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ';" class="button4" value="Button 4"/>
+            <div id="defendingRecon" style="display:none;">
+                <input type="image" src="../../Assets/Icons/Recon_bolt/Recon_Bolt-dark_blue.png" class="heavenRecon" value="heaven Recon"/>
+                <input type="image" src="../../Assets/Icons/Dot/Dot-dark_blue.png" class="r1dh1"/>
+                <input type="image" src="../../Assets/Icons/Dot/Dot-dark_blue.png" class="r1dh2"/>
+                <input type="image" src="../../Assets/Icons/Dot/Dot-dark_blue.png" class="r1dh3"/>
+                <input type="image" src="../../Assets/Icons/Dot/Dot-dark_blue.png" class="r1dh4"/>
+                <input type="image" src="../../Assets/Icons/Dot/Dot-dark_blue.png" class="r1dh5"/>
+
+                <input type="image" src="../../Assets/Icons/Recon_bolt/Recon_Bolt-light_blue.png" class="retakeBRecon" value="retake B Recon"/>
+                <input type="image" src="../../Assets/Icons/Dot/Dot-light_blue.png" class="r2drb1"/>
+
             </div>
+
+            <div id="attackingShock" style="display:none;">
+
+            </div>
+
+            <div id="defendingShock" style="display:none;">
+
+            </div>
+            
+
         </div>
 
         <div class="home">
