@@ -43,10 +43,10 @@
         function Toggle() {
 
             //Things on map
-            var defRecon = document.getElementById("defendingRecon");
-            var attRecon = document.getElementById("attackingRecon");
-            var defShock = document.getElementById("defendingShock");
-            var attShock = document.getElementById("attackingShock");
+            var defRecon = document.getElementById("defRecon");
+            var attRecon = document.getElementById("attRecon");
+            var defShock = document.getElementById("defShock");
+            var attShock = document.getElementById("attShock");
 
             //Attacking and defending buttons
             var btnAtt = document.getElementById("btnAttack");
@@ -55,11 +55,11 @@
             var btnDefToggled = document.getElementById("btnDefend-toggled");
 
             // Recon and Shock buttons
-            var reconBtn = document.getElementById("btnRecon");
-            var shockBtn = document.getElementById("btnShock");
+            var btnRecon = document.getElementById("btnRecon");
+            var btnShock = document.getElementById("btnShock");
 
             // if attack toggled and recon toggled -> toggle defend and show defend recon
-            if (btnAtt.style.display == 'none' && reconBtn.style.display == 'none') {
+            if (btnAtt.style.display == 'none' && btnRecon.style.display == 'none') {
 
                 btnAtt.style.display = 'block'
                 btnDefToggled.style.display = 'block'
@@ -73,7 +73,7 @@
             }
 
             // if attack toggled and shock toggled -> toggle defend and show defend shock
-            else if (btnAtt.style.display == 'none' && shockBtn.style.display == 'none') {
+            else if (btnAtt.style.display == 'none' && btnShock.style.display == 'none') {
                 
                 btnAtt.style.display = 'block'
                 btnDefToggled.style.display = 'block'
@@ -87,7 +87,7 @@
             }
 
             // if defend toggled and recon toggled -> toggle attack and show attack recon
-            else if (btnDef.style.display == 'none' && reconBtn.style.display == 'none') {
+            else if (btnDef.style.display == 'none' && btnRecon.style.display == 'none') {
                 
                 btnDef.style.display = 'block'
                 btnAttToggled.style.display = 'block'
@@ -101,7 +101,7 @@
             }
 
             // if defend toggled and shock toggled -> toggle attack and show attack shock
-            else if (btnDef.style.display == 'none' && shockBtn.style.display == 'none') {
+            else if (btnDef.style.display == 'none' && btnShock.style.display == 'none') {
                 
                 btnDef.style.display = 'block'
                 btnAttToggled.style.display = 'block'
@@ -117,10 +117,10 @@
         }
 
         function ToggleItem() {
-            var defRecon = document.getElementById("defendingRecon");
-            var attRecon = document.getElementById("attackingRecon");
-            var defShock = document.getElementById("defendingShock");
-            var attShock = document.getElementById("attackingShock");
+            var defRecon = document.getElementById("defRecon");
+            var attRecon = document.getElementById("attRecon");
+            var defShock = document.getElementById("defShock");
+            var attShock = document.getElementById("attShock");
 
             var btnRecon = document.getElementById("btnRecon");
             var btnShock = document.getElementById("btnShock");
@@ -201,6 +201,7 @@
             <p id="title">SOVA x BIND</p> 
         </h1>
 
+        <!-- Attack/defend buttons -->
         <div class="row">
             <div id="btnAttack" style="display:none;">
                 <button class="btn btn--dark" onclick="Toggle()">
@@ -236,6 +237,7 @@
             </div>
         </div>
 
+        <!-- Item buttons -->
         <div class="row">
             <div id="btnRecon" style="display:none;">
                 <button class="btn-sova btn--sova" onclick="ToggleItem()">
@@ -274,42 +276,47 @@
         <div class="imagewrap">
             <img src="../../Assets/Maps/Bind.png" alt="Bind">
             
-            <div id="attackingRecon">
-                <input type="image" src="../../Assets/Icons/Recon_bolt/Recon_Bolt-orange.png" class="aGodArrow" value="A god arrow"/>
-                <input type="image" src="../../Assets/Icons/Dot/Dot-orange.png" class="r1aag"/>
+            <div id="attRecon">
 
+                <!-- Attacking A god arrow -->
+                <input type="image" src="../../Assets/Icons/Recon_bolt/Recon_Bolt-pink.png" class="aGodArrow" value="A god arrow"/>
+                <input type="image" src="../../Assets/Icons/Dot/Dot-pink.png" class="r1aag"/>
+
+                <!-- Recon to hookah from A link -->
                 <input type="image" src="../../Assets/Icons/Recon_bolt/Recon_Bolt-light_blue.png" class="reconToHookah" value="recon To Hookah"/>
                 <input type="image" src="../../Assets/Icons/Dot/Dot-light_blue.png" class="r2ahk"/>
 
+                <!-- Slow arrow from B lobby onto B site -->
                 <input type="image" src="../../Assets/Icons/Recon_bolt/Recon_Bolt-red.png" class="slowLongRecon" value="slow Long Recon"/>
                 <input type="image" src="../../Assets/Icons/Dot/Dot-red.png" class="r3ab1"/>
 
+                <!-- Faster arrow from B lobby to backsite B -->
                 <input type="image" src="../../Assets/Icons/Recon_bolt/Recon_Bolt-yellow.png" class="backBRecon" value="back B Recon"/>
                 <input type="image" src="../../Assets/Icons/Dot/Dot-yellow.png" class="r3ab2"/>
-
             </div>
-            <div id="defendingRecon" style="display:none;">
-                <input type="image" src="../../Assets/Icons/Recon_bolt/Recon_Bolt-dark_blue.png" class="heavenRecon" value="heaven Recon"/>
-                <input type="image" src="../../Assets/Icons/Dot/Dot-dark_blue.png" class="r1dh1"/>
-                <input type="image" src="../../Assets/Icons/Dot/Dot-dark_blue.png" class="r1dh2"/>
-                <input type="image" src="../../Assets/Icons/Dot/Dot-dark_blue.png" class="r1dh3"/>
-                <input type="image" src="../../Assets/Icons/Dot/Dot-dark_blue.png" class="r1dh4"/>
-                <input type="image" src="../../Assets/Icons/Dot/Dot-dark_blue.png" class="r1dh5"/>
 
+            <div id="defRecon" style="display:none;">
+
+                <!-- A heaven recon arrows -->
+                <input type="image" src="../../Assets/Icons/Recon_bolt/Recon_Bolt-dark_blue.png" class="heavenRecon" value="heaven Recon"/>
+                <input type="image" src="../../Assets/Icons/Dot/Dot-dark_blue.png" class="r1dh1"/> <!-- outside showers TP -->
+                <input type="image" src="../../Assets/Icons/Dot/Dot-dark_blue.png" class="r1dh2"/> <!-- A short -->
+                <input type="image" src="../../Assets/Icons/Dot/Dot-dark_blue.png" class="r1dh3"/> <!-- B short TP -->
+                <input type="image" src="../../Assets/Icons/Dot/Dot-dark_blue.png" class="r1dh4"/> <!-- into hookah -->
+                <input type="image" src="../../Assets/Icons/Dot/Dot-dark_blue.png" class="r1dh5"/> <!-- B lobby -->
+
+                <!-- B site retake from CT -->
                 <input type="image" src="../../Assets/Icons/Recon_bolt/Recon_Bolt-light_blue.png" class="retakeBRecon" value="retake B Recon"/>
                 <input type="image" src="../../Assets/Icons/Dot/Dot-light_blue.png" class="r2drb1"/>
+            </div>
+
+            <div id="attShock" style="display:none;">
 
             </div>
 
-            <div id="attackingShock" style="display:none;">
+            <div id="defShock" style="display:none;">
 
             </div>
-
-            <div id="defendingShock" style="display:none;">
-
-            </div>
-            
-
         </div>
 
         <div class="home">
