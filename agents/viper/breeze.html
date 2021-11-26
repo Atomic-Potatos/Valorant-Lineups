@@ -13,15 +13,12 @@
             max-height: 10vh;
         }
         .imagewrap {display:inline-block;position:relative;}
-        .molly1  {max-width:3vw;max-height:3vh; position:absolute;top:53%;left:69.5%;}
-        .m1d1    {max-width:1vw;max-height:1vh; position:absolute;top:34%;left:80.5%;}
-        .m1d2    {max-width:1vw;max-height:1vh; position:absolute;top:31.3%;left:81.8%;}
-        .m1d3    {max-width:1vw;max-height:1vh; position:absolute;top:28.5%;left:80.5%;}
-        .m1d4    {max-width:1vw;max-height:1vh; position:absolute;top:31.3%;left:79.1%;}
+        .aRPyramid  {max-width:3vw;max-height:3vh; position:absolute;top:68%;left:61%;}
+        .m1arp      {max-width:1vw;max-height:1vh; position:absolute;top:49.5%;left:88%;}
 
-        .button2 {max-width:3vw;max-height:3vh; position:absolute;top:70%;left:70%;}
-        .button3 {max-width:3vw;max-height:3vh; position:absolute;top:57%;left:50%;}
-        .button4 {max-width:3vw;max-height:3vh; position:absolute;top:23%;left:75%;}   
+        .bDefault  {max-width:3vw;max-height:3vh; position:absolute;top:63%;left:32%;}
+        .m2bd      {max-width:1vw;max-height:1vh; position:absolute;top:31%;left:11.5%;}
+
     </style>
     <script>
         window.onload = function(){};
@@ -179,35 +176,28 @@
             <img src="../../Assets/Maps/Breeze.png" alt="Bind">
             <div id="attacking">
                 <div id="smokeAtt">
-                    <input type="image" src="../../Assets/Icons/Poison_Cloud.png"
-                        onclick="location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ';" class="button2" />
-                    <input type="image" src="../../Assets/Icons/Toxic_Screen.png"
-                        onclick="location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ';" class="button3" />
+
                 </div>
                 <div id="mollyAtt" style="display:none;">
-                    <input type="image" src="../../Assets/Icons/Snakebite/Snakebite-dark_blue.png"
-                        onclick="location.href='../../lineup.html?map=ascent&agent=viper&lineup=Viper-Ascent-A-Snakebite-Generator'"
-                        class="molly1" />
-                    <input type="image" src="../../Assets/Icons/Dot/Dot-dark_blue.png"
-                        onclick="location.href='../../lineup.html?map=ascent&agent=viper&lineup=Viper-Ascent-A-Snakebite-Generator'"
-                        class="m1d1" />
-                    <input type="image" src="../../Assets/Icons/Dot/Dot-dark_blue.png"
-                        onclick="location.href='../../lineup.html?map=ascent&agent=viper&lineup=Viper-Ascent-A-Snakebite-Generator'"
-                        class="m1d2" />
-                    <input type="image" src="../../Assets/Icons/Dot/Dot-dark_blue.png"
-                        onclick="location.href='../../lineup.html?map=ascent&agent=viper&lineup=Viper-Ascent-A-Snakebite-Generator'"
-                        class="m1d3" />
-                    <input type="image" src="../../Assets/Icons/Dot/Dot-dark_blue.png"
-                        onclick="location.href='../../lineup.html?map=ascent&agent=viper&lineup=Viper-Ascent-A-Snakebite-Generator'"
-                        class="m1d4" />
+                    <!-- A lobby to right pyramid -->
+                    <input type="image" src="../../Assets/Icons/Snakebite/Snakebite-dark_green.png"
+                        class="aRPyramid" />
+                    <input type="image" src="../../Assets/Icons/Dot/Dot-dark_green.png"
+                        class="m1arp" />
+                    
+                    <!-- Mid cannon to B default -->
+                    <input type="image" src="../../Assets/Icons/Snakebite/Snakebite-light_green.png"
+                        class="bDefault" />
+                    <input type="image" src="../../Assets/Icons/Dot/Dot-light_green.png"
+                        class="m2bd" />
                 </div>
             </div>
             <div id="defending" style="display:none;">
                 <div id="smokeDef">
+
                 </div>
                 <div id="mollyDef" style="display:none;">
-                    <input type="image" src="../../Assets/Icons/Snakebite.png"
-                        onclick="location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ';" class="button4" />
+
                 </div>
             </div>
         </div>

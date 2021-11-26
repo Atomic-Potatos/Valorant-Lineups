@@ -13,7 +13,7 @@
             max-height: 10vh;
         }
         .imagewrap {display:inline-block;position:relative;}
-        .molly1  {max-width:3vw;max-height:3vh; position:absolute;top:53%;left:69.5%;}
+        .genMolly  {max-width:3vw;max-height:3vh; position:absolute;top:53%;left:69.5%;}
         .m1d1    {max-width:1vw;max-height:1vh; position:absolute;top:34%;left:80.5%;}
         .m1d2    {max-width:1vw;max-height:1vh; position:absolute;top:31.3%;left:81.8%;}
         .m1d3    {max-width:1vw;max-height:1vh; position:absolute;top:28.5%;left:80.5%;}
@@ -243,28 +243,30 @@
 
                 </div>
                 <div id="mollyAtt" style="display:none;">
+
+                    <!-- A lobby to generator snakebites -->
                     <input type="image" src="../../Assets/Icons/Snakebite/Snakebite-dark_blue.png"
                         onclick="location.href='../../lineup.html?map=ascent&agent=viper&lineups=[&#34Viper-Ascent-A-Snakebite-Generator&#34,&#34Ascent-A-Lobby-Gen&#34]&state=[&#34attacking&#34,&#34snakebite&#34]'"
-                        class="molly1" />
+                        class="genMolly" />
+                    <input type="image" src="../../Assets/Icons/Dot/Dot-dark_blue.png" 
+                        onclick="location.href='../../lineup.html?map=ascent&agent=viper&lineups=[&#34Viper-Ascent-A-Snakebite-Generator&#34,&#34Ascent-A-Lobby-Gen&#34]&state=[&#34attacking&#34,&#34snakebite&#34]'"
+                        class="m1d1" /> <!-- front -->
                     <input type="image" src="../../Assets/Icons/Dot/Dot-dark_blue.png"
                         onclick="location.href='../../lineup.html?map=ascent&agent=viper&lineups=[&#34Viper-Ascent-A-Snakebite-Generator&#34,&#34Ascent-A-Lobby-Gen&#34]&state=[&#34attacking&#34,&#34snakebite&#34]'"
-                        class="m1d1" />
+                        class="m1d2" /> <!-- right -->
                     <input type="image" src="../../Assets/Icons/Dot/Dot-dark_blue.png"
                         onclick="location.href='../../lineup.html?map=ascent&agent=viper&lineups=[&#34Viper-Ascent-A-Snakebite-Generator&#34,&#34Ascent-A-Lobby-Gen&#34]&state=[&#34attacking&#34,&#34snakebite&#34]'"
-                        class="m1d2" />
+                        class="m1d3" /> <!-- back -->
                     <input type="image" src="../../Assets/Icons/Dot/Dot-dark_blue.png"
                         onclick="location.href='../../lineup.html?map=ascent&agent=viper&lineups=[&#34Viper-Ascent-A-Snakebite-Generator&#34,&#34Ascent-A-Lobby-Gen&#34]&state=[&#34attacking&#34,&#34snakebite&#34]'"
-                        class="m1d3" />
-                    <input type="image" src="../../Assets/Icons/Dot/Dot-dark_blue.png"
-                        onclick="location.href='../../lineup.html?map=ascent&agent=viper&lineups=[&#34Viper-Ascent-A-Snakebite-Generator&#34,&#34Ascent-A-Lobby-Gen&#34]&state=[&#34attacking&#34,&#34snakebite&#34]'"
-                        class="m1d4" />
+                        class="m1d4" /> <!-- left -->
                 </div>
             </div>
             <div id="defending" style="display:none;">
                 <div id="smokeDef">
 
                 </div>
-                
+
                 <div id="mollyDef" style="display:none;">
 
                 </div>
