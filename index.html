@@ -5,10 +5,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agent Select</title>
+
+    <script>
+      var audio = new Audio();
+      function playAudio(file) {
+        audio.pause();
+        audio = new Audio(file);
+        audio.play();
+      }
+    </script>
+
   </head>
   
   <div>
-    <h1><p id="title">Select Your Agent</p></h1>
+    <h1><p id="title" onclick="playAudio('Assets/Audio/select-your-agent.mp3')">Select Your Agent</p></h1>
     <br>
     <br>
 
