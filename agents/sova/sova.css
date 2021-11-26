@@ -136,7 +136,7 @@
   
   .btn--sova-toggled {
     --button-background-color: var(--highlight-color);
-    --button-text-color: var(--background-color);
+    --button-text-color: #ece8e1;
     --button-inner-border-color: var(--highlight-color);
     --button-text-color-hover: #ece8e1;
     --button-bits-color-hover: #ece8e1;
