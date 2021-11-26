@@ -14,10 +14,16 @@
         }
         .imagewrap {display:inline-block;position:relative;}
         .genMolly  {max-width:3vw;max-height:3vh; position:absolute;top:53%;left:69.5%;}
-        .m1d1    {max-width:1vw;max-height:1vh; position:absolute;top:34%;left:80.5%;}
-        .m1d2    {max-width:1vw;max-height:1vh; position:absolute;top:31.3%;left:81.8%;}
-        .m1d3    {max-width:1vw;max-height:1vh; position:absolute;top:28.5%;left:80.5%;}
-        .m1d4    {max-width:1vw;max-height:1vh; position:absolute;top:31.3%;left:79.1%;}
+        .m1gf    {max-width:1vw;max-height:1vh; position:absolute;top:34%;left:80.5%;}
+        .m1gr    {max-width:1vw;max-height:1vh; position:absolute;top:31.3%;left:81.8%;}
+        .m1gb    {max-width:1vw;max-height:1vh; position:absolute;top:28.5%;left:80.5%;}
+        .m1gl    {max-width:1vw;max-height:1vh; position:absolute;top:31.3%;left:79.1%;}
+
+        .backAHeavenSetup {max-width:3vw;max-height:3vh; position:absolute;top:13%;left:72.6%;}
+        .s1dam    {max-width:1vw;max-height:1vh; position:absolute;top:43.7%;left:85%;}
+
+        .backBSmoke {max-width:3vw;max-height:3vh; position:absolute;top:19%;left:34%;}
+        .s2dbg      {max-width:1vw;max-height:1vh; position:absolute;top:36.7%;left:32.7%;}
 
     </style>
     <script>
@@ -250,25 +256,42 @@
                         class="genMolly" />
                     <input type="image" src="../../Assets/Icons/Dot/Dot-dark_blue.png" 
                         onclick="location.href='../../lineup.html?map=ascent&agent=viper&lineups=[&#34Viper-Ascent-A-Snakebite-Generator&#34,&#34Ascent-A-Lobby-Gen&#34]&state=[&#34attacking&#34,&#34snakebite&#34]'"
-                        class="m1d1" /> <!-- front -->
+                        class="m1gf" /> <!-- front -->
                     <input type="image" src="../../Assets/Icons/Dot/Dot-dark_blue.png"
                         onclick="location.href='../../lineup.html?map=ascent&agent=viper&lineups=[&#34Viper-Ascent-A-Snakebite-Generator&#34,&#34Ascent-A-Lobby-Gen&#34]&state=[&#34attacking&#34,&#34snakebite&#34]'"
-                        class="m1d2" /> <!-- right -->
+                        class="m1gr" /> <!-- right -->
                     <input type="image" src="../../Assets/Icons/Dot/Dot-dark_blue.png"
                         onclick="location.href='../../lineup.html?map=ascent&agent=viper&lineups=[&#34Viper-Ascent-A-Snakebite-Generator&#34,&#34Ascent-A-Lobby-Gen&#34]&state=[&#34attacking&#34,&#34snakebite&#34]'"
-                        class="m1d3" /> <!-- back -->
+                        class="m1gb" /> <!-- back -->
                     <input type="image" src="../../Assets/Icons/Dot/Dot-dark_blue.png"
                         onclick="location.href='../../lineup.html?map=ascent&agent=viper&lineups=[&#34Viper-Ascent-A-Snakebite-Generator&#34,&#34Ascent-A-Lobby-Gen&#34]&state=[&#34attacking&#34,&#34snakebite&#34]'"
-                        class="m1d4" /> <!-- left -->
+                        class="m1gl" /> <!-- left -->
                 </div>
             </div>
             <div id="defending" style="display:none;">
                 <div id="smokeDef">
 
+                    <!-- heaven to A main arch (retake) -->
+                    <input type="image" src="../../Assets/Icons/Poison_Cloud/Poison_Cloud-red.png"
+                        class="backAHeavenSetup" />
+                    <input type="image" src="../../Assets/Icons/Dot/Dot-red.png"
+                        class="s1dam" />
+
+                    <!-- B garage one-way -->
+                    <input type="image" src="../../Assets/Icons/Poison_Cloud/Poison_Cloud-orange.png"
+                        class="backBSmoke" />
+                    <input type="image" src="../../Assets/Icons/Dot/Dot-orange.png"
+                        class="s2dbg" />
+
                 </div>
 
                 <div id="mollyDef" style="display:none;">
 
+                    <!-- heaven to left gen anti-plant -->
+                    <input type="image" src="../../Assets/Icons/Snakebite/Snakebite-yellow.png"
+                        class="backAHeavenSetup" />
+                    <input type="image" src="../../Assets/Icons/Dot/Dot-yellow.png"
+                        class="m1gl" />
                 </div>
             </div>
         </div>
