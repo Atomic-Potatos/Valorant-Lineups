@@ -9,10 +9,10 @@
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);
         const map = urlParams.get('map');
-        const side = urlParams.get('side');
         const agent = urlParams.get('agent');
         const lineups = JSON.parse(urlParams.get('lineups'));
         const state = urlParams.get('state');
+        const side = JSON.parse(state)[0]
 
         window.onload = function(){
           for (i=0; i<lineups.length; i++) {
